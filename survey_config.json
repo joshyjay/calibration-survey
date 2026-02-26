@@ -357,8 +357,8 @@
     },
     {
       "panel": "EQ103_median4k_20250923_115914_panel3",
-      "colour": "reflectives ",
-      "path": "reflectives /EQ103_median4k_20250923_115914_panel3",
+      "colour": "reflectives",
+      "path": "reflectives/EQ103_median4k_20250923_115914_panel3",
       "original_size": [
         797,
         1650
@@ -1176,8 +1176,8 @@
     },
     {
       "panel": "EQ103_median4k_20251001_102120_panel2",
-      "colour": "reflectives ",
-      "path": "reflectives /EQ103_median4k_20251001_102120_panel2",
+      "colour": "reflectives",
+      "path": "reflectives/EQ103_median4k_20251001_102120_panel2",
       "original_size": [
         797,
         1650
@@ -1302,8 +1302,8 @@
     },
     {
       "panel": "EQ103_median4k_20250923_115638_panel3",
-      "colour": "reflectives ",
-      "path": "reflectives /EQ103_median4k_20250923_115638_panel3",
+      "colour": "reflectives",
+      "path": "reflectives/EQ103_median4k_20250923_115638_panel3",
       "original_size": [
         797,
         1650
@@ -1491,8 +1491,8 @@
     },
     {
       "panel": "EQ103_median4k_20251001_101849_panel3",
-      "colour": "reflectives ",
-      "path": "reflectives /EQ103_median4k_20251001_101849_panel3",
+      "colour": "reflectives",
+      "path": "reflectives/EQ103_median4k_20251001_101849_panel3",
       "original_size": [
         797,
         1650
@@ -1869,8 +1869,8 @@
     },
     {
       "panel": "EQ103_median4k_20250904_134729_panel2",
-      "colour": "reflectives ",
-      "path": "reflectives /EQ103_median4k_20250904_134729_panel2",
+      "colour": "reflectives",
+      "path": "reflectives/EQ103_median4k_20250904_134729_panel2",
       "original_size": [
         797,
         1650
@@ -1932,8 +1932,8 @@
     },
     {
       "panel": "EQ103_median4k_20250923_120525_panel3",
-      "colour": "reflectives ",
-      "path": "reflectives /EQ103_median4k_20250923_120525_panel3",
+      "colour": "reflectives",
+      "path": "reflectives/EQ103_median4k_20250923_120525_panel3",
       "original_size": [
         797,
         1650
@@ -2058,8 +2058,8 @@
     },
     {
       "panel": "EQ103_median4k_20250923_115753_panel2",
-      "colour": "reflectives ",
-      "path": "reflectives /EQ103_median4k_20250923_115753_panel2",
+      "colour": "reflectives",
+      "path": "reflectives/EQ103_median4k_20250923_115753_panel2",
       "original_size": [
         797,
         1650
@@ -2184,8 +2184,8 @@
     },
     {
       "panel": "EQ103_median4k_20250904_134350_panel1",
-      "colour": "reflectives ",
-      "path": "reflectives /EQ103_median4k_20250904_134350_panel1",
+      "colour": "reflectives",
+      "path": "reflectives/EQ103_median4k_20250904_134350_panel1",
       "original_size": [
         797,
         1650
@@ -2247,8 +2247,8 @@
     },
     {
       "panel": "EQ103_median4k_20251001_101849_panel1",
-      "colour": "reflectives ",
-      "path": "reflectives /EQ103_median4k_20251001_101849_panel1",
+      "colour": "reflectives",
+      "path": "reflectives/EQ103_median4k_20251001_101849_panel1",
       "original_size": [
         797,
         1650
@@ -3066,8 +3066,8 @@
     },
     {
       "panel": "EQ103_median4k_20250904_134602_panel2",
-      "colour": "reflectives ",
-      "path": "reflectives /EQ103_median4k_20250904_134602_panel2",
+      "colour": "reflectives",
+      "path": "reflectives/EQ103_median4k_20250904_134602_panel2",
       "original_size": [
         797,
         1650
