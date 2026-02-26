@@ -501,7 +501,7 @@ function startSurvey() {
 
 function injectDuplicates() {
   const n = config.panels.length;
-  const nDups = Math.max(1, Math.floor(n * 0.1));
+  const nDups = Math.max(2, Math.floor(n * 0.25));
   for (let i = 0; i < nDups; i++) {
     const srcIdx = Math.floor(Math.random() * n);
     const dup = JSON.parse(JSON.stringify(config.panels[srcIdx]));
