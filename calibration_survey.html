@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fouling Coverage Calibration Study</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --bg: #0a0a0f;
+    --surface: #14141f;
+    --surface-hover: #1e1e2e;
+    --border: #2a2a3a;
+    --text: #e0e0e8;
+    --text-dim: #8888a0;
+    --accent: #6ee7b7;
+    --accent-dim: #2d6a52;
+    --magenta: #ff00ff;
+    --selected: #1a3a2e;
+    --warning: #f59e0b;
+    --q1-accent: #6ee7b7;
+    --q2-accent: #93c5fd;
+  }
+
+  body {
+    font-family: 'IBM Plex Sans', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    line-height: 1.5;
+  }
+
+  /* ── Setup ── */
+  #setup-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 2rem;
+  }
+
+  #setup-screen h1 {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--accent);
+  }
+
+  #setup-screen > p {
+    color: var(--text-dim);
+    max-width: 560px;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 0.95rem;
+  }
+
+  .setup-form {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 2rem;
+    width: 100%;
+    max-width: 480px;
+  }
+
+  .setup-form label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--text-dim);
+    margin-bottom: 0.4rem;
+    font-family: 'IBM Plex Mono', monospace;
+  }
+
+  .setup-form input {
+    width: 100%;
+    padding: 0.6rem 0.8rem;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    color: var(--text);
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 0.95rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .setup-form input:focus { outline: none; border-color: var(--accent); }
+
+  .btn {
+    display: inline-block;
+    padding: 0.7rem 1.6rem;
+    border: none;
+    border-radius: 4px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s ease;
+  }
+
+  .btn-primary { background: var(--accent); color: var(--bg); }
+  .btn-primary:hover { opacity: 0.85; }
+  .btn-primary:disabled { opacity: 0.4; cursor: not-allowed; }
+  .btn-secondary { background: var(--surface); color: var(--text); border: 1px solid var(--border); }
+  .btn-secondary:hover { background: var(--surface-hover); }
+
+  .loading-msg {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.85rem;
+    color: var(--text-dim);
+    margin-bottom: 1rem;
+  }
+
+  .loading-msg.error { color: #f87171; }
+  .loading-msg.ok { color: var(--accent); }
+
+  /* ── Survey ── */
+  #survey-screen { display: none; }
+
+  .survey-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
+    padding: 0.7rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .progress-info {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.85rem;
+    color: var(--text-dim);
+  }
+
+  .progress-info strong { color: var(--accent); font-size: 1rem; }
+
+  .progress-bar-wrap {
+    flex: 1;
+    max-width: 300px;
+    margin: 0 1.5rem;
+    height: 4px;
+    background: var(--border);
+    border-radius: 2px;
+    overflow: hidden;
+  }
+
+  .progress-bar-fill {
+    height: 100%;
+    background: var(--accent);
+    transition: width 0.3s ease;
+    border-radius: 2px;
+  }
+
+  .panel-tag {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.75rem;
+    padding: 0.2rem 0.6rem;
+    border-radius: 3px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    color: var(--text-dim);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .survey-body {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 1.5rem 2rem 3rem;
+  }
+
+  .question-section {
+    margin-bottom: 2rem;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .question-header {
+    padding: 0.8rem 1.2rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+  }
+
+  .question-header .q-badge {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.15rem 0.5rem;
+    border-radius: 3px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    flex-shrink: 0;
+  }
+
+  .q1 .question-header { background: rgba(110, 231, 183, 0.08); }
+  .q1 .q-badge { background: var(--q1-accent); color: var(--bg); }
+  .q1 .option-card.selected { border-color: var(--q1-accent); box-shadow: 0 0 12px rgba(110, 231, 183, 0.15); }
+  .q1 .option-card.selected .option-label { background: var(--q1-accent); color: var(--bg); }
+
+  .q2 .question-header { background: rgba(147, 197, 253, 0.08); }
+  .q2 .q-badge { background: var(--q2-accent); color: var(--bg); }
+  .q2 .option-card.selected { border-color: var(--q2-accent); box-shadow: 0 0 12px rgba(147, 197, 253, 0.15); }
+  .q2 .option-card.selected .option-label { background: var(--q2-accent); color: var(--bg); }
+
+  .question-body { padding: 1rem 1.2rem; }
+
+  .panel-layout {
+    display: grid;
+    grid-template-columns: 1fr 2.5fr;
+    gap: 1.2rem;
+    align-items: start;
+  }
+
+  .ref-section { position: sticky; top: 80px; }
+
+  .ref-section h3 {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--text-dim);
+    margin-bottom: 0.4rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  .ref-image {
+    width: 100%;
+    border-radius: 6px;
+    border: 2px solid var(--warning);
+  }
+
+  .options-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0.5rem;
+  }
+
+  .option-card {
+    position: relative;
+    cursor: pointer;
+    border-radius: 6px;
+    border: 2px solid var(--border);
+    overflow: hidden;
+    transition: all 0.15s ease;
+    background: var(--surface);
+  }
+
+  .option-card:hover {
+    border-color: var(--accent-dim);
+    transform: translateY(-1px);
+  }
+
+  .option-card.selected { background: var(--selected); }
+
+  .option-card img { width: 100%; display: block; }
+
+  .option-label {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.8rem;
+    font-weight: 600;
+    background: rgba(0,0,0,0.7);
+    color: white;
+    padding: 0.1rem 0.4rem;
+    border-radius: 3px;
+  }
+
+  .selection-row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 0.6rem;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.8rem;
+    color: var(--text-dim);
+  }
+
+  .selection-row .selected-val { color: var(--accent); }
+
+  .nav-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+  }
+
+  .nav-buttons .btn { min-width: 120px; text-align: center; }
+
+  .nav-status {
+    font-size: 0.82rem;
+    color: var(--text-dim);
+    font-family: 'IBM Plex Mono', monospace;
+    text-align: center;
+  }
+
+  .nav-status .complete { color: var(--accent); }
+  .nav-status .incomplete { color: var(--warning); }
+
+  /* ── Results ── */
+  #results-screen {
+    display: none;
+    padding: 3rem 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  #results-screen h2 {
+    font-family: 'IBM Plex Mono', monospace;
+    color: var(--accent);
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+
+  .results-box {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    text-align: left;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.85rem;
+    color: var(--text-dim);
+    line-height: 1.8;
+  }
+
+  .results-box strong { color: var(--text); }
+
+  .export-row {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1.5rem;
+  }
+
+  @media (max-width: 1000px) {
+    .panel-layout { grid-template-columns: 1fr; }
+    .options-grid { grid-template-columns: repeat(3, 1fr); }
+    .ref-section { position: static; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══════════ SETUP ═══════════ -->
+<div id="setup-screen">
+  <h1>Fouling Coverage Calibration</h1>
+  <p>
+    For each panel you will answer two questions using the same set of
+    threshold options. This calibrates where fouling detection and
+    macro algae classification boundaries should be drawn.
+  </p>
+  <div class="setup-form">
+    <label for="annotator-name">Your name or initials</label>
+    <input type="text" id="annotator-name" placeholder="e.g. JKP" />
+
+    <div class="loading-msg" id="config-status">Loading survey configuration...</div>
+
+    <button class="btn btn-primary" id="start-btn" onclick="startSurvey()" disabled>
+      Begin Survey
+    </button>
+  </div>
+</div>
+
+<!-- ═══════════ SURVEY ═══════════ -->
+<div id="survey-screen">
+  <div class="survey-header">
+    <div class="progress-info">
+      Panel <strong id="cur-idx">1</strong> / <span id="tot-panels">0</span>
+    </div>
+    <div class="progress-bar-wrap">
+      <div class="progress-bar-fill" id="prog-bar"></div>
+    </div>
+    <span class="panel-tag" id="panel-tag">blue</span>
+  </div>
+
+  <div class="survey-body">
+    <div class="panel-layout">
+      <div class="ref-section">
+        <h3>Reference (original panel)</h3>
+        <img id="ref-img" class="ref-image" src="" alt="Reference" />
+      </div>
+
+      <div class="questions-column">
+
+        <div class="question-section q1" id="q1-section">
+          <div class="question-header">
+            <span class="q-badge">Q1</span>
+            <span id="q1-text">Loading...</span>
+          </div>
+          <div class="question-body">
+            <div class="options-grid" id="q1-grid"></div>
+            <div class="selection-row">
+              Selected: <span id="q1-status" class="selected-val">none</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="question-section q2" id="q2-section">
+          <div class="question-header">
+            <span class="q-badge">Q2</span>
+            <span id="q2-text">Loading...</span>
+          </div>
+          <div class="question-body">
+            <div class="options-grid" id="q2-grid"></div>
+            <div class="selection-row">
+              Selected: <span id="q2-status" class="selected-val">none</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="nav-buttons">
+      <button class="btn btn-secondary" id="prev-btn" onclick="navigate(-1)">← Previous</button>
+      <div class="nav-status" id="nav-status"></div>
+      <button class="btn btn-primary" id="next-btn" onclick="navigate(1)">Next →</button>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════ RESULTS ═══════════ -->
+<div id="results-screen">
+  <h2>Survey Complete</h2>
+  <p style="color:var(--text-dim);">Thank you for participating.</p>
+  <div class="results-box" id="results-box"></div>
+  <div class="export-row">
+    <button class="btn btn-primary" onclick="exportCSV()">Export CSV</button>
+    <button class="btn btn-secondary" onclick="exportJSON()">Export JSON</button>
+  </div>
+</div>
+
+
+<script>
+// ═══════════ State ═══════════
+let config = null;
+let questions = [];
+let annotator = '';
+const imageRoot = './';
+let currentPanel = 0;
+let responses = {};
+let panelStartTime = null;
+
+// ═══════════ Auto-load config on page load ═══════════
+window.addEventListener('DOMContentLoaded', async () => {
+  const statusEl = document.getElementById('config-status');
+  const startBtn = document.getElementById('start-btn');
+
+  try {
+    const resp = await fetch('./survey_config.json');
+    if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+    config = await resp.json();
+    questions = config.questions || [];
+
+    if (questions.length < 2) {
+      throw new Error('Config must define at least 2 questions.');
+    }
+
+    statusEl.textContent = `Loaded: ${config.n_panels} panels, ${config.n_options_per_panel} options each.`;
+    statusEl.classList.add('ok');
+    startBtn.disabled = false;
+  } catch (err) {
+    statusEl.textContent = 'Failed to load survey_config.json: ' + err.message;
+    statusEl.classList.add('error');
+  }
+});
+
+// ═══════════ Start ═══════════
+function startSurvey() {
+  annotator = document.getElementById('annotator-name').value.trim();
+  if (!annotator) { alert('Enter your name or initials.'); return; }
+
+  injectDuplicates();
+
+  document.getElementById('setup-screen').style.display = 'none';
+  document.getElementById('survey-screen').style.display = 'block';
+  document.getElementById('tot-panels').textContent = config.panels.length;
+
+  document.getElementById('q1-text').textContent = questions[0].text;
+  document.getElementById('q2-text').textContent = questions[1].text;
+
+  loadPanel(0);
+}
+
+function injectDuplicates() {
+  const n = config.panels.length;
+  const nDups = Math.max(1, Math.floor(n * 0.1));
+  for (let i = 0; i < nDups; i++) {
+    const srcIdx = Math.floor(Math.random() * n);
+    const dup = JSON.parse(JSON.stringify(config.panels[srcIdx]));
+    dup._isDuplicate = true;
+    dup._originalIndex = srcIdx;
+    const insertAt = Math.floor(Math.random() * (config.panels.length - 1)) + 1;
+    config.panels.splice(insertAt, 0, dup);
+  }
+}
+
+// ═══════════ Panel rendering ═══════════
+function panelKey(panel, idx) {
+  return panel.path + (panel._isDuplicate ? '_dup_' + idx : '');
+}
+
+function loadPanel(idx) {
+  currentPanel = idx;
+  const panel = config.panels[idx];
+  const key = panelKey(panel, idx);
+
+  document.getElementById('cur-idx').textContent = idx + 1;
+  document.getElementById('tot-panels').textContent = config.panels.length;
+  document.getElementById('panel-tag').textContent = panel.colour;
+  document.getElementById('prog-bar').style.width =
+    ((idx / config.panels.length) * 100) + '%';
+
+  document.getElementById('ref-img').src =
+    imageRoot + panel.path + '/individual/reference.png';
+
+  buildGrid('q1-grid', panel, key, 'q1');
+  buildGrid('q2-grid', panel, key, 'q2');
+
+  updateStatus(key);
+  updateNav();
+  panelStartTime = Date.now();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function buildGrid(gridId, panel, key, qKey) {
+  const grid = document.getElementById(gridId);
+  grid.innerHTML = '';
+
+  const labels = config.option_labels;
+  for (const label of labels) {
+    const card = document.createElement('div');
+    card.className = 'option-card';
+    card.dataset.label = label;
+    card.dataset.qkey = qKey;
+
+    if (responses[key] && responses[key][qKey + '_label'] === label) {
+      card.classList.add('selected');
+    }
+
+    card.onclick = () => selectOption(qKey, label);
+
+    const img = document.createElement('img');
+    img.src = imageRoot + panel.path + '/individual/' + label + '.png';
+    img.alt = 'Option ' + label;
+    img.loading = 'lazy';
+
+    const labelEl = document.createElement('div');
+    labelEl.className = 'option-label';
+    labelEl.textContent = label;
+
+    card.appendChild(img);
+    card.appendChild(labelEl);
+    grid.appendChild(card);
+  }
+}
+
+function selectOption(qKey, label) {
+  const panel = config.panels[currentPanel];
+  const key = panelKey(panel, currentPanel);
+
+  if (!responses[key]) {
+    responses[key] = {
+      panelPath: panel.path,
+      colour: panel.colour,
+      panelName: panel.panel,
+      isDuplicate: !!panel._isDuplicate,
+    };
+  }
+
+  responses[key][qKey + '_label'] = label;
+  responses[key][qKey + '_timestamp'] = new Date().toISOString();
+
+  if (!responses[key].firstInteraction) {
+    responses[key].firstInteraction = Date.now();
+  }
+
+  const gridId = qKey + '-grid';
+  document.querySelectorAll('#' + gridId + ' .option-card').forEach(card => {
+    card.classList.toggle('selected', card.dataset.label === label);
+  });
+
+  updateStatus(key);
+  updateNav();
+}
+
+function updateStatus(key) {
+  const r = responses[key] || {};
+
+  const q1s = document.getElementById('q1-status');
+  q1s.textContent = r.q1_label || 'none';
+  q1s.style.color = r.q1_label ? 'var(--q1-accent)' : 'var(--text-dim)';
+
+  const q2s = document.getElementById('q2-status');
+  q2s.textContent = r.q2_label || 'none';
+  q2s.style.color = r.q2_label ? 'var(--q2-accent)' : 'var(--text-dim)';
+
+  const answered = Object.values(responses).filter(
+    r => r.q1_label && r.q2_label
+  ).length;
+  const total = config.panels.length;
+  const navStatus = document.getElementById('nav-status');
+  const cls = (r.q1_label && r.q2_label) ? 'complete' : 'incomplete';
+  const panelStatus = (r.q1_label && r.q2_label) ? 'Both answered' : 'Incomplete';
+  navStatus.innerHTML = `<span class="${cls}">${panelStatus}</span> · ${answered}/${total} panels done`;
+}
+
+function updateNav() {
+  document.getElementById('prev-btn').disabled = currentPanel === 0;
+  const isLast = currentPanel === config.panels.length - 1;
+  document.getElementById('next-btn').textContent = isLast ? 'Finish ✓' : 'Next →';
+}
+
+function navigate(dir) {
+  const panel = config.panels[currentPanel];
+  const key = panelKey(panel, currentPanel);
+  if (responses[key] && panelStartTime) {
+    responses[key].timeSpentMs = (responses[key].timeSpentMs || 0) +
+      (Date.now() - panelStartTime);
+  }
+
+  const next = currentPanel + dir;
+  if (next < 0) return;
+
+  if (next >= config.panels.length) {
+    const answered = Object.values(responses).filter(
+      r => r.q1_label && r.q2_label
+    ).length;
+    const total = config.panels.length;
+    if (answered < total) {
+      if (!confirm(`${answered}/${total} panels complete. Finish anyway?`)) return;
+    }
+    showResults();
+    return;
+  }
+
+  loadPanel(next);
+}
+
+// ═══════════ Results ═══════════
+function showResults() {
+  document.getElementById('survey-screen').style.display = 'none';
+  document.getElementById('results-screen').style.display = 'block';
+
+  const total = config.panels.length;
+  const answered = Object.values(responses).filter(
+    r => r.q1_label && r.q2_label
+  ).length;
+  const dups = config.panels.filter(p => p._isDuplicate).length;
+
+  let q1Agree = 0, q2Agree = 0, dupChecked = 0;
+  for (let i = 0; i < config.panels.length; i++) {
+    const p = config.panels[i];
+    if (!p._isDuplicate) continue;
+    const dupKey = panelKey(p, i);
+    const origIdx = config.panels.findIndex(
+      (op, oi) => op.path === p.path && !op._isDuplicate
+    );
+    if (origIdx < 0) continue;
+    const origKey = panelKey(config.panels[origIdx], origIdx);
+    if (!responses[dupKey] || !responses[origKey]) continue;
+    dupChecked++;
+    if (responses[dupKey].q1_label === responses[origKey].q1_label) q1Agree++;
+    if (responses[dupKey].q2_label === responses[origKey].q2_label) q2Agree++;
+  }
+
+  const pct = (n, d) => d > 0 ? `${n}/${d} (${((n/d)*100).toFixed(0)}%)` : 'N/A';
+
+  document.getElementById('results-box').innerHTML = `
+    <strong>Annotator:</strong> ${annotator}<br>
+    <strong>Panels answered:</strong> ${answered} / ${total}<br>
+    <strong>Duplicate panels:</strong> ${dups}<br>
+    <strong>Q1 intra-rater agreement:</strong> ${pct(q1Agree, dupChecked)}<br>
+    <strong>Q2 intra-rater agreement:</strong> ${pct(q2Agree, dupChecked)}<br>
+    <strong>Completed:</strong> ${new Date().toISOString()}
+  `;
+}
+
+function buildExportData() {
+  const rows = [];
+  for (let i = 0; i < config.panels.length; i++) {
+    const panel = config.panels[i];
+    const key = panelKey(panel, i);
+    const r = responses[key] || {};
+
+    const m = panel.mapping || {};
+    const q1Thresh = (r.q1_label && m[r.q1_label]) ? m[r.q1_label].threshold : null;
+    const q1Cov = (r.q1_label && m[r.q1_label]) ? m[r.q1_label].coverage_pct : null;
+    const q2Thresh = (r.q2_label && m[r.q2_label]) ? m[r.q2_label].threshold : null;
+    const q2Cov = (r.q2_label && m[r.q2_label]) ? m[r.q2_label].coverage_pct : null;
+
+    rows.push({
+      annotator: annotator,
+      presentation_order: i,
+      panel_name: panel.panel,
+      colour: panel.colour,
+      panel_path: panel.path,
+      is_duplicate: !!panel._isDuplicate,
+      q1_label: r.q1_label || '',
+      q1_threshold: q1Thresh,
+      q1_coverage_pct: q1Cov,
+      q2_label: r.q2_label || '',
+      q2_threshold: q2Thresh,
+      q2_coverage_pct: q2Cov,
+      time_spent_ms: r.timeSpentMs || '',
+      mean_model_probability: panel.mean_probability,
+    });
+  }
+  return rows;
+}
+
+function exportCSV() {
+  const rows = buildExportData();
+  const headers = Object.keys(rows[0]);
+  let csv = headers.join(',') + '\n';
+  for (const row of rows) {
+    csv += headers.map(h => {
+      let v = row[h];
+      if (v === null || v === undefined) v = '';
+      v = String(v);
+      if (v.includes(',') || v.includes('"')) v = '"' + v.replace(/"/g, '""') + '"';
+      return v;
+    }).join(',') + '\n';
+  }
+  download(csv, `calibration_${annotator}_${Date.now()}.csv`, 'text/csv');
+}
+
+function exportJSON() {
+  const data = {
+    annotator,
+    completed: new Date().toISOString(),
+    seed: config.seed,
+    questions: config.questions,
+    responses: buildExportData(),
+  };
+  download(JSON.stringify(data, null, 2),
+    `calibration_${annotator}_${Date.now()}.json`, 'application/json');
+}
+
+function download(content, filename, type) {
+  const blob = new Blob([content], { type });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = filename;
+  a.click();
+}
+</script>
+</body>
+</html>

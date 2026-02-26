@@ -1,0 +1,3131 @@
+{
+  "study": "fouling_coverage_threshold_calibration",
+  "version": "3.0",
+  "seed": 42,
+  "n_panels": 49,
+  "n_options_per_panel": 10,
+  "thresholds_used": [
+    0.1,
+    0.2,
+    0.3,
+    0.4,
+    0.5,
+    0.6,
+    0.7,
+    0.8,
+    0.9
+  ],
+  "option_labels": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F",
+    "G",
+    "H",
+    "I",
+    "J"
+  ],
+  "questions": [
+    {
+      "id": "clean_vs_fouled",
+      "text": "Which option best represents where fouling begins? Select the option whose magenta overlay most accurately captures ALL fouled regions, including faint biofilm and slime.",
+      "short": "Clean vs Fouled"
+    },
+    {
+      "id": "incipient_vs_macro",
+      "text": "Which option best represents where macro algae is present? Select the option whose magenta overlay captures only the regions with visible macro algae (weed), excluding slime and biofilm.",
+      "short": "Incipient vs Macro Algae"
+    }
+  ],
+  "panels": [
+    {
+      "panel": "EQ103_median4k_20251001_094930_panel1",
+      "colour": "greys",
+      "path": "greys/EQ103_median4k_20251001_094930_panel1",
+      "original_size": [
+        797,
+        1650
+      ],
+      "mapping": {
+        "A": {
+          "threshold": null,
+          "description": "none",
+          "coverage_pct": 0.0
+        },
+        "B": {
+          "threshold": 0.8,
+          "description": "0.8",
+          "coverage_pct": 49.36169727386792
+        },
+        "C": {
+          "threshold": 0.4,
+          "description": "0.4",
+          "coverage_pct": 97.25949583666021
+        },
+        "D": {
+          "threshold": 0.6,
+          "description": "0.6",
+          "coverage_pct": 80.49176837382609
+        },
+        "E": {
+          "threshold": 0.3,
+          "description": "0.3",
+          "coverage_pct": 99.56906581498802
+        },
+        "F": {
+          "threshold": 0.5,
+          "description": "0.5",
+          "coverage_pct": 91.30937987148778
+        },
+        "G": {
+          "threshold": 0.1,
+          "description": "0.1",
+          "coverage_pct": 100.0
+        },
+        "H": {
+          "threshold": 0.7,
+          "description": "0.7",
+          "coverage_pct": 65.62624995247329
+        },
+        "I": {
+          "threshold": 0.2,
+          "description": "0.2",
+          "coverage_pct": 99.9917873845101
+        },
+        "J": {
+          "threshold": 0.9,
+          "description": "0.9",
+          "coverage_pct": 32.17596289114482
+        }
+      },
+      "mean_probability": 77.02783203125,
+      "presentation_order": 0
+    },
+    {
+      "panel": "EQ103_median4k_20250904_142433_panel2",
+      "colour": "greys",
+      "path": "greys/EQ103_median4k_20250904_142433_panel2",
+      "original_size": [
+        797,
+        1650
+      ],
+      "mapping": {
+        "A": {
+          "threshold": 0.6,
+          "description": "0.6",
+          "coverage_pct": 91.66442340595414
+        },
+        "B": {
+          "threshold": 0.8,
+          "description": "0.8",
+          "coverage_pct": 86.29884795254932
+        },
+        "C": {
+          "threshold": 0.5,
+          "description": "0.5",
+          "coverage_pct": 93.2309798106536
+        },
+        "D": {
+          "threshold": null,
+          "description": "none",
+          "coverage_pct": 0.0
+        },
+        "E": {
+          "threshold": 0.9,
+          "description": "0.9",
+          "coverage_pct": 79.09904566366298
+        },
+        "F": {
+          "threshold": 0.3,
+          "description": "0.3",
+          "coverage_pct": 95.95802440971826
+        },
+        "G": {
+          "threshold": 0.7,
+          "description": "0.7",
+          "coverage_pct": 89.39606859054788
+        },
+        "H": {
+          "threshold": 0.4,
+          "description": "0.4",
+          "coverage_pct": 94.55245047716816
+        },
+        "I": {
+          "threshold": 0.1,
+          "description": "0.1",
+          "coverage_pct": 99.65894832896088
+        },
+        "J": {
+          "threshold": 0.2,
+          "description": "0.2",
+          "coverage_pct": 97.70487814151552
+        }
+      },
+      "mean_probability": 90.26564025878906,
+      "presentation_order": 1
+    },
+    {
+      "panel": "EQ103_median4k_20250625_131245_panel1",
+      "colour": "greys",
+      "path": "greys/EQ103_median4k_20250625_131245_panel1",
+      "original_size": [
+        797,
+        1650
+      ],
+      "mapping": {
+        "A": {
+          "threshold": 0.1,
+          "description": "0.1",
+          "coverage_pct": 100.0
+        },
+        "B": {
+          "threshold": 0.4,
+          "description": "0.4",
+          "coverage_pct": 97.28071176000913
+        },
+        "C": {
+          "threshold": null,
+          "description": "none",
+          "coverage_pct": 0.0
+        },
+        "D": {
+          "threshold": 0.7,
+          "description": "0.7",
+          "coverage_pct": 63.41515531728832
+        },
+        "E": {
+          "threshold": 0.9,
+          "description": "0.9",
+          "coverage_pct": 37.369073419261625
+        },
+        "F": {
+          "threshold": 0.3,
+          "description": "0.3",
+          "coverage_pct": 99.83285806623321
+        },
+        "G": {
+          "threshold": 0.2,
+          "description": "0.2",
+          "coverage_pct": 100.0
+        },
+        "H": {
+          "threshold": 0.6,
+          "description": "0.6",
+          "coverage_pct": 77.78152921942132
+        },
+        "I": {
+          "threshold": 0.8,
+          "description": "0.8",
+          "coverage_pct": 50.6784532907494
+        },
+        "J": {
+          "threshold": 0.5,
+          "description": "0.5",
+          "coverage_pct": 90.08387513782746
+        }
+      },
+      "mean_probability": 77.28760528564453,
+      "presentation_order": 2
+    },
+    {
+      "panel": "2024-07-14_03-15-03",
+      "colour": "green",
+      "path": "green/2024-07-14_03-15-03",
+      "original_size": [
+        550,
+        987
+      ],
+      "mapping": {
+        "A": {
+          "threshold": 0.7,
+          "description": "0.7",
+          "coverage_pct": 0.0005526388505111909
+        },
+        "B": {
+          "threshold": 0.1,
+          "description": "0.1",
+          "coverage_pct": 1.555494151238832
+        },
+        "C": {
+          "threshold": 0.5,
+          "description": "0.5",
+          "coverage_pct": 0.1880814221239753
+        },
+        "D": {
+          "threshold": 0.9,
+          "description": "0.9",
+          "coverage_pct": 0.0
+        },
+        "E": {
+          "threshold": 0.6,
+          "description": "0.6",
+          "coverage_pct": 0.0036842590034079394
+        },
+        "F": {
+          "threshold": 0.8,
+          "description": "0.8",
+          "coverage_pct": 0.0
+        },
+        "G": {
+          "threshold": null,
+          "description": "none",
+          "coverage_pct": 0.0
+        },
+        "H": {
+          "threshold": 0.4,
+          "description": "0.4",
+          "coverage_pct": 0.20189739338675508
+        },
+        "I": {
+          "threshold": 0.3,
+          "description": "0.3",
+          "coverage_pct": 0.5209542230818827
+        },
+        "J": {
+          "threshold": 0.2,
+          "description": "0.2",
+          "coverage_pct": 0.9673022013447545
+        }
+      },
+      "mean_probability": 1.5727324485778809,
+      "presentation_order": 3
+    },
+    {
+      "panel": "EQ103_median4k_20250923_122948_panel1",
+      "colour": "blues",
+      "path": "blues/EQ103_median4k_20250923_122948_panel1",
+      "original_size": [
+        797,
+        1650
+      ],
+      "mapping": {
+        "A": {
+          "threshold": 0.5,
+          "description": "0.5",
+          "coverage_pct": 79.18831983574769
+        },
+        "B": {
+          "threshold": null,
+          "description": "none",
+          "coverage_pct": 0.0
+        },
+        "C": {
+          "threshold": 0.2,
+          "description": "0.2",
+          "coverage_pct": 83.50868788259001
+        },
+        "D": {
+          "threshold": 0.8,
+          "description": "0.8",
+          "coverage_pct": 70.50652066461352
+        },
+        "E": {
+          "threshold": 0.3,
+          "description": "0.3",
+          "coverage_pct": 81.83012052773658
+        },
+        "F": {
+          "threshold": 0.9,
+          "description": "0.9",
+          "coverage_pct": 59.56130945591423
+        },
+        "G": {
+          "threshold": 0.7,
+          "description": "0.7",
+          "coverage_pct": 75.39812174442037
+        },
+        "H": {
+          "threshold": 0.4,
+          "description": "0.4",
+          "coverage_pct": 80.5021862286605
+        },
+        "I": {
+          "threshold": 0.1,
+          "description": "0.1",
+          "coverage_pct": 87.3573628379149
+        },
+        "J": {
+          "threshold": 0.6,
+          "description": "0.6",
+          "coverage_pct": 77.73096079996958
+        }
+      },
+      "mean_probability": 75.07350158691406,
+      "presentation_order": 4
+    },
+    {
+      "panel": "EQ103_median4k_20250923_115914_panel3",
+      "colour": "reflectives ",
+      "path": "reflectives /EQ103_median4k_20250923_115914_panel3",
+      "original_size": [
+        797,
+        1650
+      ],
+      "mapping": {
+        "A": {
+          "threshold": 0.3,
+          "description": "0.3",
+          "coverage_pct": 99.53074027603513
+        },
+        "B": {
+          "threshold": 0.2,
+          "description": "0.2",
+          "coverage_pct": 99.72472529561614
+        },
+        "C": {
+          "threshold": 0.1,
+          "description": "0.1",
+          "coverage_pct": 99.86312307516825
+        },
+        "D": {
+          "threshold": 0.5,
+          "description": "0.5",
+          "coverage_pct": 99.03539789361622
+        },
+        "E": {
+          "threshold": 0.7,
+          "description": "0.7",
+          "coverage_pct": 98.27778411467246
+        },
+        "F": {
+          "threshold": 0.8,
+          "description": "0.8",
+          "coverage_pct": 97.62875936276187
+        },
+        "G": {
+          "threshold": 0.9,
+          "description": "0.9",
+          "coverage_pct": 96.42028820196951
+        },
+        "H": {
+          "threshold": null,
+          "description": "none",
+          "coverage_pct": 0.0
+        },
+        "I": {
+          "threshold": 0.6,
+          "description": "0.6",
+          "coverage_pct": 98.72476331698414
+        },
+        "J": {
+          "threshold": 0.4,
+          "description": "0.4",
+          "coverage_pct": 99.29561613626858
+        }
+      },
+      "mean_probability": 98.07074737548828,
+      "presentation_order": 5
+    },
+    {
+      "panel": "EQ103_median4k_20251008_095001_panel2",
+      "colour": "greys",
+      "path": "greys/EQ103_median4k_20251008_095001_panel2",
+      "original_size": [
+        797,
+        1650
+      ],
+      "mapping": {
+        "A": {
+          "threshold": null,
+          "description": "none",
+          "coverage_pct": 0.0
+        },
+        "B": {
+          "threshold": 0.1,
+          "description": "0.1",
+          "coverage_pct": 82.8973803277442
+        },
+        "C": {
+          "threshold": 0.2,
+          "description": "0.2",
+          "coverage_pct": 80.15923348922094
+        },
+        "D": {
+          "threshold": 0.7,
+          "description": "0.7",
+          "coverage_pct": 74.89464278924756
+        },
+        "E": {
+          "threshold": 0.9,
+          "description": "0.9",
+          "coverage_pct": 71.60997680696552
+        },
+        "F": {
+          "threshold": 0.8,
+          "description": "0.8",
+          "coverage_pct": 73.7029770731151
+        },
+        "G": {
+          "threshold": 0.6,
+          "description": "0.6",
+          "coverage_pct": 75.81962663016614
+        },
+        "H": {
+          "threshold": 0.5,
+          "description": "0.5",
+          "coverage_pct": 76.7133569065815
+        },
+        "I": {
+          "threshold": 0.4,
+          "description": "0.4",
+          "coverage_pct": 77.60039542222728
+        },
+        "J": {
+          "threshold": 0.3,
+          "description": "0.3",
+          "coverage_pct": 78.74506672750086
+        }
+      },
+      "mean_probability": 77.06024169921875,
+      "presentation_order": 6
+    },
+    {
+      "panel": "EQ103_median4k_20251106_120113_panel2",
+      "colour": "blues",
+      "path": "blues/EQ103_median4k_20251106_120113_panel2",
+      "original_size": [
+        797,
+        1650
+      ],
+      "mapping": {
+        "A": {
+          "threshold": 0.4,
+          "description": "0.4",
+          "coverage_pct": 40.94840500361203
+        },
+        "B": {
+          "threshold": 0.5,
+          "description": "0.5",
+          "coverage_pct": 27.822364168662787
+        },
+        "C": {
+          "threshold": null,
+          "description": "none",
+          "coverage_pct": 0.0
+        },
+        "D": {
+          "threshold": 0.2,
+          "description": "0.2",
+          "coverage_pct": 84.38667731264971
+        },
+        "E": {
+          "threshold": 0.6,
+          "description": "0.6",
+          "coverage_pct": 21.32405611953918
+        },
+        "F": {
+          "threshold": 0.7,
+          "description": "0.7",
+          "coverage_pct": 16.569560092772136
+        },
+        "G": {
+          "threshold": 0.1,
+          "description": "0.1",
+          "coverage_pct": 99.82426523706323
+        },
+        "H": {
+          "threshold": 0.8,
+          "description": "0.8",
+          "coverage_pct": 12.58111858864682
+        },
+        "I": {
+          "threshold": 0.9,
+          "description": "0.9",
+          "coverage_pct": 7.949203452340216
+        },
+        "J": {
+          "threshold": 0.3,
+          "description": "0.3",
+          "coverage_pct": 61.45522983916961
+        }
+      },
+      "mean_probability": 42.34233474731445,
+      "presentation_order": 7
+    },
+    {
+      "panel": "EQ103_median4k_20250625_132441_panel1",
+      "colour": "reds",
+      "path": "reds/EQ103_median4k_20250625_132441_panel1",
+      "original_size": [
+        797,
+        1650
+      ],
+      "mapping": {
+        "A": {
+          "threshold": 0.9,
+          "description": "0.9",
+          "coverage_pct": 43.3848903083533
+        },
+        "B": {
+          "threshold": 0.1,
+          "description": "0.1",
+          "coverage_pct": 100.0
+        },
+        "C": {
+          "threshold": 0.6,
+          "description": "0.6",
+          "coverage_pct": 72.98308049123608
+        },
+        "D": {
+          "threshold": 0.3,
+          "description": "0.3",
+          "coverage_pct": 96.80073001026577
+        },
+        "E": {
+          "threshold": 0.8,
+          "description": "0.8",
+          "coverage_pct": 52.7211132656553
+        },
+        "F": {
+          "threshold": 0.5,
+          "description": "0.5",
+          "coverage_pct": 80.54887646857534
+        },
+        "G": {
+          "threshold": 0.4,
+          "description": "0.4",
+          "coverage_pct": 89.551728071176
+        },
+        "H": {
+          "threshold": null,
+          "description": "none",
+          "coverage_pct": 0.0
+        },
+        "I": {
+          "threshold": 0.2,
+          "description": "0.2",
+          "coverage_pct": 99.83224972434508
+        },
+        "J": {
+          "threshold": 0.7,
+          "description": "0.7",
+          "coverage_pct": 63.86662104102505
+        }
+      },
+      "mean_probability": 75.47946166992188,
+      "presentation_order": 8
+    },
+    {
+      "panel": "2024-07-30_03-15-03",
+      "colour": "green",
+      "path": "green/2024-07-30_03-15-03",
+      "original_size": [
+        550,
+        987
+      ],
+      "mapping": {
+        "A": {
+          "threshold": 0.4,
+          "description": "0.4",
+          "coverage_pct": 67.71907525099014
+        },
+        "B": {
+          "threshold": 0.8,
+          "description": "0.8",
+          "coverage_pct": 55.26812194897302
+        },
+        "C": {
+          "threshold": null,
+          "description": "none",
+          "coverage_pct": 0.0
+        },
+        "D": {
+          "threshold": 0.1,
+          "description": "0.1",
+          "coverage_pct": 90.98019710785668
+        },
+        "E": {
+          "threshold": 0.3,
+          "description": "0.3",
+          "coverage_pct": 72.87464308740904
+        },
+        "F": {
+          "threshold": 0.6,
+          "description": "0.6",
+          "coverage_pct": 61.36520217371281
+        },
+        "G": {
+          "threshold": 0.7,
+          "description": "0.7",
+          "coverage_pct": 58.136133370175926
+        },
+        "H": {
+          "threshold": 0.5,
+          "description": "0.5",
+          "coverage_pct": 64.06631666206134
+        },
+        "I": {
+          "threshold": 0.9,
+          "description": "0.9",
+          "coverage_pct": 51.23606889564336
+        },
+        "J": {
+          "threshold": 0.2,
+          "description": "0.2",
+          "coverage_pct": 79.9981578704983
+        }
+      },
+      "mean_probability": 66.21991729736328,
+      "presentation_order": 9
+    },
+    {
+      "panel": "EQ103_median4k_20250709_141558_panel2",
+      "colour": "reds",
+      "path": "reds/EQ103_median4k_20250709_141558_panel2",
+      "original_size": [
+        797,
+        1650
+      ],
+      "mapping": {
+        "A": {
+          "threshold": 0.4,
+          "description": "0.4",
+          "coverage_pct": 70.40310254362952
+        },
+        "B": {
+          "threshold": 0.9,
+          "description": "0.9",
+          "coverage_pct": 0.13254248887874986
+        },
+        "C": {
+          "threshold": 0.5,
+          "description": "0.5",
+          "coverage_pct": 52.93806319151363
+        },
+        "D": {
+          "threshold": 0.2,
+          "description": "0.2",
+          "coverage_pct": 99.24474354587278
+        },
+        "E": {
+          "threshold": null,
+          "description": "none",
+          "coverage_pct": 0.0
+        },
+        "F": {
+          "threshold": 0.7,
+          "description": "0.7",
+          "coverage_pct": 13.634538610699213
+        },
+        "G": {
+          "threshold": 0.6,
+          "description": "0.6",
+          "coverage_pct": 37.03113950039922
+        },
+        "H": {
+          "threshold": 0.1,
+          "description": "0.1",
+          "coverage_pct": 100.0
+        },
+        "I": {
+          "threshold": 0.8,
+          "description": "0.8",
+          "coverage_pct": 2.9027033192654272
+        },
+        "J": {
+          "threshold": 0.3,
+          "description": "0.3",
+          "coverage_pct": 89.56146154138625
+        }
+      },
+      "mean_probability": 51.695037841796875,
+      "presentation_order": 10
+    },
+    {
+      "panel": "EQ103_median4k_20250721_104642_panel2",
+      "colour": "greys",
+      "path": "greys/EQ103_median4k_20250721_104642_panel2",
+      "original_size": [
+        797,
+        1650
+      ],
+      "mapping": {
+        "A": {
+          "threshold": 0.8,
+          "description": "0.8",
+          "coverage_pct": 82.72788106916087
+        },
+        "B": {
+          "threshold": null,
+          "description": "none",
+          "coverage_pct": 0.0
+        },
+        "C": {
+          "threshold": 0.6,
+          "description": "0.6",
+          "coverage_pct": 95.22907874225315
+        },
+        "D": {
+          "threshold": 0.1,
+          "description": "0.1",
+          "coverage_pct": 100.0
+        },
+        "E": {
+          "threshold": 0.7,
+          "description": "0.7",
+          "coverage_pct": 89.51271814759895
+        },
+        "F": {
+          "threshold": 0.3,
+          "description": "0.3",
+          "coverage_pct": 99.87437740009885
+        },
+        "G": {
+          "threshold": 0.2,
+          "description": "0.2",
+          "coverage_pct": 99.99209155545417
+        },
+        "H": {
+          "threshold": 0.4,
+          "description": "0.4",
+          "coverage_pct": 99.34329493175164
+        },
+        "I": {
+          "threshold": 0.9,
+          "description": "0.9",
+          "coverage_pct": 66.71411733394169
+        },
+        "J": {
+          "threshold": 0.5,
+          "description": "0.5",
+          "coverage_pct": 98.03741302612067
+        }
+      },
+      "mean_probability": 89.52222442626953,
+      "presentation_order": 11
+    },
+    {
+      "panel": "2024-07-18_03-15-03",
+      "colour": "green",
+      "path": "green/2024-07-18_03-15-03",
+      "original_size": [
+        514,
+        963
+      ],
+      "mapping": {
+        "A": {
+          "threshold": 0.5,
+          "description": "0.5",
+          "coverage_pct": 0.20162349337955726
+        },
+        "B": {
+          "threshold": 0.6,
+          "description": "0.6",
+          "coverage_pct": 0.005050688711912756
+        },
+        "C": {
+          "threshold": 0.4,
+          "description": "0.4",
+          "coverage_pct": 0.2288972124238861
+        },
+        "D": {
+          "threshold": 0.9,
+          "description": "0.9",
+          "coverage_pct": 0.0
+        },
+        "E": {
+          "threshold": null,
+          "description": "none",
+          "coverage_pct": 0.0
+        },
+        "F": {
+          "threshold": 0.7,
+          "description": "0.7",
+          "coverage_pct": 0.0006060826454295308
+        },
+        "G": {
+          "threshold": 0.3,
+          "description": "0.3",
+          "coverage_pct": 0.7307336428395376
+        },
+        "H": {
+          "threshold": 0.2,
+          "description": "0.2",
+          "coverage_pct": 1.1149900400418602
+        },
+        "I": {
+          "threshold": 0.1,
+          "description": "0.1",
+          "coverage_pct": 1.7063246744326057
+        },
+        "J": {
+          "threshold": 0.8,
+          "description": "0.8",
+          "coverage_pct": 0.0
+        }
+      },
+      "mean_probability": 2.2077667713165283,
+      "presentation_order": 12
+    },
+    {
+      "panel": "EQ103_median4k_20250923_121158_panel2",
+      "colour": "blues",
+      "path": "blues/EQ103_median4k_20250923_121158_panel2",
+      "original_size": [
+        797,
+        1650
+      ],
+      "mapping": {
+        "A": {
+          "threshold": 0.1,
+          "description": "0.1",
+          "coverage_pct": 96.73693015474697
+        },
+        "B": {
+          "threshold": 0.4,
+          "description": "0.4",
+          "coverage_pct": 52.91669518269268
+        },
+        "C": {
+          "threshold": 0.3,
+          "description": "0.3",
+          "coverage_pct": 66.24212007148017
+        },
+        "D": {
+          "threshold": 0.6,
+          "description": "0.6",
+          "coverage_pct": 31.78639595452644
+        },
+        "E": {
+          "threshold": 0.9,
+          "description": "0.9",
+          "coverage_pct": 9.95581917037375
+        },
+        "F": {
+          "threshold": 0.5,
+          "description": "0.5",
+          "coverage_pct": 40.19063913919623
+        },
+        "G": {
+          "threshold": 0.7,
+          "description": "0.7",
+          "coverage_pct": 24.298087525189157
+        },
+        "H": {
+          "threshold": null,
+          "description": "none",
+          "coverage_pct": 0.0
+        },
+        "I": {
+          "threshold": 0.8,
+          "description": "0.8",
+          "coverage_pct": 17.51788905364815
+        },
+        "J": {
+          "threshold": 0.2,
+          "description": "0.2",
+          "coverage_pct": 81.36952967567773
+        }
+      },
+      "mean_probability": 47.07080078125,
+      "presentation_order": 13
+    },
+    {
+      "panel": "EQ103_median4k_20251031_150340_panel2",
+      "colour": "reds",
+      "path": "reds/EQ103_median4k_20251031_150340_panel2",
+      "original_size": [
+        797,
+        1650
+      ],
+      "mapping": {
+        "A": {
+          "threshold": 0.6,
+          "description": "0.6",
+          "coverage_pct": 83.15600167294019
+        },
+        "B": {
+          "threshold": 0.1,
+          "description": "0.1",
+          "coverage_pct": 99.89384434051937
+        },
+        "C": {
+          "threshold": null,
+          "description": "none",
+          "coverage_pct": 0.0
+        },
+        "D": {
+          "threshold": 0.2,
+          "description": "0.2",
+          "coverage_pct": 98.62780882856164
+        },
+        "E": {
+          "threshold": 0.4,
+          "description": "0.4",
+          "coverage_pct": 92.48226303182389
+        },
+        "F": {
+          "threshold": 0.7,
+          "description": "0.7",
+          "coverage_pct": 74.17725561765712
+        },
+        "G": {
+          "threshold": 0.8,
+          "description": "0.8",
+          "coverage_pct": 63.5633626097867
+        },
+        "H": {
+          "threshold": 0.5,
+          "description": "0.5",
+          "coverage_pct": 88.41876734724914
+        },
+        "I": {
+          "threshold": 0.3,
+          "description": "0.3",
+          "coverage_pct": 95.91817801604502
+        },
+        "J": {
+          "threshold": 0.9,
+          "description": "0.9",
+          "coverage_pct": 50.724307060568044
+        }
+      },
+      "mean_probability": 80.18803405761719,
+      "presentation_order": 14
+    },
+    {
+      "panel": "EQ103_single_20250625_102028_panel3",
+      "colour": "reds",
+      "path": "reds/EQ103_single_20250625_102028_panel3",
+      "original_size": [
+        797,
+        1650
+      ],
+      "mapping": {
+        "A": {
+          "threshold": 0.2,
+          "description": "0.2",
+          "coverage_pct": 100.0
+        },
+        "B": {
+          "threshold": 0.3,
+          "description": "0.3",
+          "coverage_pct": 99.89931941751264
+        },
+        "C": {
+          "threshold": 0.8,
+          "description": "0.8",
+          "coverage_pct": 0.0
+        },
+        "D": {
+          "threshold": 0.1,
+          "description": "0.1",
+          "coverage_pct": 100.0
+        },
+        "E": {
+          "threshold": 0.9,
+          "description": "0.9",
+          "coverage_pct": 0.0
+        },
+        "F": {
+          "threshold": null,
+          "description": "none",
+          "coverage_pct": 0.0
+        },
+        "G": {
+          "threshold": 0.4,
+          "description": "0.4",
+          "coverage_pct": 70.9357819094331
+        },
+        "H": {
+          "threshold": 0.6,
+          "description": "0.6",
+          "coverage_pct": 0.621801452416258
+        },
+        "I": {
+          "threshold": 0.7,
+          "description": "0.7",
+          "coverage_pct": 0.0005322991521234933
+        },
+        "J": {
+          "threshold": 0.5,
+          "description": "0.5",
+          "coverage_pct": 18.69069617124824
+        }
+      },
+      "mean_probability": 44.19246292114258,
+      "presentation_order": 15
+    },
+    {
+      "panel": "2024-07-11_03-15-03",
+      "colour": "green",
+      "path": "green/2024-07-11_03-15-03",
+      "original_size": [
+        514,
+        963
+      ],
+      "mapping": {
+        "A": {
+          "threshold": 0.4,
+          "description": "0.4",
+          "coverage_pct": 0.2288972124238861
+        },
+        "B": {
+          "threshold": 0.3,
+          "description": "0.3",
+          "coverage_pct": 0.7307336428395376
+        },
+        "C": {
+          "threshold": 0.8,
+          "description": "0.8",
+          "coverage_pct": 0.0
+        },
+        "D": {
+          "threshold": 0.9,
+          "description": "0.9",
+          "coverage_pct": 0.0
+        },
+        "E": {
+          "threshold": null,
+          "description": "none",
+          "coverage_pct": 0.0
+        },
+        "F": {
+          "threshold": 0.7,
+          "description": "0.7",
+          "coverage_pct": 0.0006060826454295308
+        },
+        "G": {
+          "threshold": 0.5,
+          "description": "0.5",
+          "coverage_pct": 0.20162349337955726
+        },
+        "H": {
+          "threshold": 0.1,
+          "description": "0.1",
+          "coverage_pct": 1.7063246744326057
+        },
+        "I": {
+          "threshold": 0.6,
+          "description": "0.6",
+          "coverage_pct": 0.005050688711912756
+        },
+        "J": {
+          "threshold": 0.2,
+          "description": "0.2",
+          "coverage_pct": 1.1149900400418602
+        }
+      },
+      "mean_probability": 2.2077667713165283,
+      "presentation_order": 16
+    },
+    {
+      "panel": "EQ103_median4k_20250923_113642_panel1",
+      "colour": "greys",
+      "path": "greys/EQ103_median4k_20250923_113642_panel1",
+      "original_size": [
+        797,
+        1650
+      ],
+      "mapping": {
+        "A": {
+          "threshold": 0.5,
+          "description": "0.5",
+          "coverage_pct": 94.49146420288203
+        },
+        "B": {
+          "threshold": 0.6,
+          "description": "0.6",
+          "coverage_pct": 91.07319113341697
+        },
+        "C": {
+          "threshold": 0.9,
+          "description": "0.9",
+          "coverage_pct": 53.44580053990342
+        },
+        "D": {
+          "threshold": 0.8,
+          "description": "0.8",
+          "coverage_pct": 74.57176533211664
+        },
+        "E": {
+          "threshold": 0.7,
+          "description": "0.7",
+          "coverage_pct": 84.87471959241093
+        },
+        "F": {
+          "threshold": 0.3,
+          "description": "0.3",
+          "coverage_pct": 97.85878863921525
+        },
+        "G": {
+          "threshold": null,
+          "description": "none",
+          "coverage_pct": 0.0
+        },
+        "H": {
+          "threshold": 0.2,
+          "description": "0.2",
+          "coverage_pct": 98.92673282384699
+        },
+        "I": {
+          "threshold": 0.4,
+          "description": "0.4",
+          "coverage_pct": 96.461199193947
+        },
+        "J": {
+          "threshold": 0.1,
+          "description": "0.1",
+          "coverage_pct": 99.77179574921105
+        }
+      },
+      "mean_probability": 85.05783081054688,
+      "presentation_order": 17
+    },
+    {
+      "panel": "EQ103_median4k_20251001_102120_panel2",
+      "colour": "reflectives ",
+      "path": "reflectives /EQ103_median4k_20251001_102120_panel2",
+      "original_size": [
+        797,
+        1650
+      ],
+      "mapping": {
+        "A": {
+          "threshold": 0.8,
+          "description": "0.8",
+          "coverage_pct": 60.32531082468348
+        },
+        "B": {
+          "threshold": 0.2,
+          "description": "0.2",
+          "coverage_pct": 91.2995703585415
+        },
+        "C": {
+          "threshold": 0.1,
+          "description": "0.1",
+          "coverage_pct": 98.01574084635564
+        },
+        "D": {
+          "threshold": null,
+          "description": "none",
+          "coverage_pct": 0.0
+        },
+        "E": {
+          "threshold": 0.7,
+          "description": "0.7",
+          "coverage_pct": 65.96806205087259
+        },
+        "F": {
+          "threshold": 0.5,
+          "description": "0.5",
+          "coverage_pct": 74.49792783544352
+        },
+        "G": {
+          "threshold": 0.6,
+          "description": "0.6",
+          "coverage_pct": 70.36112695334779
+        },
+        "H": {
+          "threshold": 0.3,
+          "description": "0.3",
+          "coverage_pct": 84.69913691494621
+        },
+        "I": {
+          "threshold": 0.9,
+          "description": "0.9",
+          "coverage_pct": 52.20470704535949
+        },
+        "J": {
+          "threshold": 0.4,
+          "description": "0.4",
+          "coverage_pct": 79.11760009125129
+        }
+      },
+      "mean_probability": 74.25892639160156,
+      "presentation_order": 18
+    },
+    {
+      "panel": "2024-07-29_03-15-02",
+      "colour": "blues",
+      "path": "blues/2024-07-29_03-15-02",
+      "original_size": [
+        534,
+        977
+      ],
+      "mapping": {
+        "A": {
+          "threshold": null,
+          "description": "none",
+          "coverage_pct": 0.0
+        },
+        "B": {
+          "threshold": 0.5,
+          "description": "0.5",
+          "coverage_pct": 94.82402370629343
+        },
+        "C": {
+          "threshold": 0.8,
+          "description": "0.8",
+          "coverage_pct": 62.072422266435126
+        },
+        "D": {
+          "threshold": 0.3,
+          "description": "0.3",
+          "coverage_pct": 99.46311992302354
+        },
+        "E": {
+          "threshold": 0.9,
+          "description": "0.9",
+          "coverage_pct": 35.21634292855527
+        },
+        "F": {
+          "threshold": 0.6,
+          "description": "0.6",
+          "coverage_pct": 89.94322603398771
+        },
+        "G": {
+          "threshold": 0.1,
+          "description": "0.1",
+          "coverage_pct": 100.0
+        },
+        "H": {
+          "threshold": 0.2,
+          "description": "0.2",
+          "coverage_pct": 100.0
+        },
+        "I": {
+          "threshold": 0.4,
+          "description": "0.4",
+          "coverage_pct": 97.68936475260581
+        },
+        "J": {
+          "threshold": 0.7,
+          "description": "0.7",
+          "coverage_pct": 78.50486278027593
+        }
+      },
+      "mean_probability": 80.59886932373047,
+      "presentation_order": 19
+    },
+    {
+      "panel": "EQ103_median4k_20250923_115638_panel3",
+      "colour": "reflectives ",
+      "path": "reflectives /EQ103_median4k_20250923_115638_panel3",
+      "original_size": [
+        797,
+        1650
+      ],
+      "mapping": {
+        "A": {
+          "threshold": null,
+          "description": "none",
+          "coverage_pct": 0.0
+        },
+        "B": {
+          "threshold": 0.5,
+          "description": "0.5",
+          "coverage_pct": 98.37435838941485
+        },
+        "C": {
+          "threshold": 0.6,
+          "description": "0.6",
+          "coverage_pct": 98.14341660012927
+        },
+        "D": {
+          "threshold": 0.7,
+          "description": "0.7",
+          "coverage_pct": 97.86928253678568
+        },
+        "E": {
+          "threshold": 0.3,
+          "description": "0.3",
+          "coverage_pct": 98.82666058324779
+        },
+        "F": {
+          "threshold": 0.4,
+          "description": "0.4",
+          "coverage_pct": 98.5883426485685
+        },
+        "G": {
+          "threshold": 0.9,
+          "description": "0.9",
+          "coverage_pct": 96.44986882628037
+        },
+        "H": {
+          "threshold": 0.2,
+          "description": "0.2",
+          "coverage_pct": 99.11227709973005
+        },
+        "I": {
+          "threshold": 0.1,
+          "description": "0.1",
+          "coverage_pct": 99.39857800083647
+        },
+        "J": {
+          "threshold": 0.8,
+          "description": "0.8",
+          "coverage_pct": 97.4197939241854
+        }
+      },
+      "mean_probability": 97.82042694091797,
+      "presentation_order": 20
+    },
+    {
+      "panel": "2024-08-05_03-15-03",
+      "colour": "green",
+      "path": "green/2024-08-05_03-15-03",
+      "original_size": [
+        550,
+        987
+      ],
+      "mapping": {
+        "A": {
+          "threshold": 0.6,
+          "description": "0.6",
+          "coverage_pct": 82.75785207700102
+        },
+        "B": {
+          "threshold": 0.1,
+          "description": "0.1",
+          "coverage_pct": 95.33683337938658
+        },
+        "C": {
+          "threshold": 0.5,
+          "description": "0.5",
+          "coverage_pct": 85.51441466335083
+        },
+        "D": {
+          "threshold": 0.3,
+          "description": "0.3",
+          "coverage_pct": 90.14534401768445
+        },
+        "E": {
+          "threshold": 0.7,
+          "description": "0.7",
+          "coverage_pct": 78.5681127383255
+        },
+        "F": {
+          "threshold": null,
+          "description": "none",
+          "coverage_pct": 0.0
+        },
+        "G": {
+          "threshold": 0.2,
+          "description": "0.2",
+          "coverage_pct": 92.65819287095883
+        },
+        "H": {
+          "threshold": 0.8,
+          "description": "0.8",
+          "coverage_pct": 69.12296214423874
+        },
+        "I": {
+          "threshold": 0.9,
+          "description": "0.9",
+          "coverage_pct": 33.44054527033251
+        },
+        "J": {
+          "threshold": 0.4,
+          "description": "0.4",
+          "coverage_pct": 87.86441926867458
+        }
+      },
+      "mean_probability": 76.45069122314453,
+      "presentation_order": 21
+    },
+    {
+      "panel": "EQ103_median4k_20250827_132618_panel1",
+      "colour": "reds",
+      "path": "reds/EQ103_median4k_20250827_132618_panel1",
+      "original_size": [
+        797,
+        1650
+      ],
+      "mapping": {
+        "A": {
+          "threshold": 0.9,
+          "description": "0.9",
+          "coverage_pct": 23.709516748412607
+        },
+        "B": {
+          "threshold": 0.3,
+          "description": "0.3",
+          "coverage_pct": 99.22086612676324
+        },
+        "C": {
+          "threshold": 0.4,
+          "description": "0.4",
+          "coverage_pct": 96.68651382076727
+        },
+        "D": {
+          "threshold": 0.7,
+          "description": "0.7",
+          "coverage_pct": 57.09204973194936
+        },
+        "E": {
+          "threshold": 0.5,
+          "description": "0.5",
+          "coverage_pct": 88.05361012889243
+        },
+        "F": {
+          "threshold": 0.6,
+          "description": "0.6",
+          "coverage_pct": 76.5995969734991
+        },
+        "G": {
+          "threshold": 0.1,
+          "description": "0.1",
+          "coverage_pct": 100.0
+        },
+        "H": {
+          "threshold": null,
+          "description": "none",
+          "coverage_pct": 0.0
+        },
+        "I": {
+          "threshold": 0.8,
+          "description": "0.8",
+          "coverage_pct": 40.16653359187863
+        },
+        "J": {
+          "threshold": 0.2,
+          "description": "0.2",
+          "coverage_pct": 99.9116383407475
+        }
+      },
+      "mean_probability": 73.28079986572266,
+      "presentation_order": 22
+    },
+    {
+      "panel": "EQ103_median4k_20251001_101849_panel3",
+      "colour": "reflectives ",
+      "path": "reflectives /EQ103_median4k_20251001_101849_panel3",
+      "original_size": [
+        797,
+        1650
+      ],
+      "mapping": {
+        "A": {
+          "threshold": null,
+          "description": "none",
+          "coverage_pct": 0.0
+        },
+        "B": {
+          "threshold": 0.6,
+          "description": "0.6",
+          "coverage_pct": 91.56495950724307
+        },
+        "C": {
+          "threshold": 0.5,
+          "description": "0.5",
+          "coverage_pct": 94.28394357628987
+        },
+        "D": {
+          "threshold": 0.1,
+          "description": "0.1",
+          "coverage_pct": 99.90707577658644
+        },
+        "E": {
+          "threshold": 0.9,
+          "description": "0.9",
+          "coverage_pct": 72.85479639557431
+        },
+        "F": {
+          "threshold": 0.2,
+          "description": "0.2",
+          "coverage_pct": 99.14147751036082
+        },
+        "G": {
+          "threshold": 0.4,
+          "description": "0.4",
+          "coverage_pct": 96.26181514010874
+        },
+        "H": {
+          "threshold": 0.8,
+          "description": "0.8",
+          "coverage_pct": 82.54553058819056
+        },
+        "I": {
+          "threshold": 0.7,
+          "description": "0.7",
+          "coverage_pct": 87.64837838865442
+        },
+        "J": {
+          "threshold": 0.3,
+          "description": "0.3",
+          "coverage_pct": 97.97521006805825
+        }
+      },
+      "mean_probability": 89.8612289428711,
+      "presentation_order": 23
+    },
+    {
+      "panel": "EQ103_median4k_20250827_132618_panel2",
+      "colour": "reds",
+      "path": "reds/EQ103_median4k_20250827_132618_panel2",
+      "original_size": [
+        797,
+        1650
+      ],
+      "mapping": {
+        "A": {
+          "threshold": null,
+          "description": "none",
+          "coverage_pct": 0.0
+        },
+        "B": {
+          "threshold": 0.2,
+          "description": "0.2",
+          "coverage_pct": 98.46598988631611
+        },
+        "C": {
+          "threshold": 0.8,
+          "description": "0.8",
+          "coverage_pct": 57.12528040758906
+        },
+        "D": {
+          "threshold": 0.6,
+          "description": "0.6",
+          "coverage_pct": 80.58005399034258
+        },
+        "E": {
+          "threshold": 0.3,
+          "description": "0.3",
+          "coverage_pct": 96.0112543249306
+        },
+        "F": {
+          "threshold": 0.4,
+          "description": "0.4",
+          "coverage_pct": 92.23276681495001
+        },
+        "G": {
+          "threshold": 0.9,
+          "description": "0.9",
+          "coverage_pct": 43.26900117866241
+        },
+        "H": {
+          "threshold": 0.5,
+          "description": "0.5",
+          "coverage_pct": 86.74864073609369
+        },
+        "I": {
+          "threshold": 0.7,
+          "description": "0.7",
+          "coverage_pct": 70.3383141325425
+        },
+        "J": {
+          "threshold": 0.1,
+          "description": "0.1",
+          "coverage_pct": 99.97505798258621
+        }
+      },
+      "mean_probability": 77.92393493652344,
+      "presentation_order": 24
+    },
+    {
+      "panel": "EQ103_median4k_20250625_141426_panel2",
+      "colour": "reds",
+      "path": "reds/EQ103_median4k_20250625_141426_panel2",
+      "original_size": [
+        797,
+        1650
+      ],
+      "mapping": {
+        "A": {
+          "threshold": 0.9,
+          "description": "0.9",
+          "coverage_pct": 69.94661799931562
+        },
+        "B": {
+          "threshold": 0.7,
+          "description": "0.7",
+          "coverage_pct": 79.92357705030227
+        },
+        "C": {
+          "threshold": null,
+          "description": "none",
+          "coverage_pct": 0.0
+        },
+        "D": {
+          "threshold": 0.6,
+          "description": "0.6",
+          "coverage_pct": 84.8995095243527
+        },
+        "E": {
+          "threshold": 0.8,
+          "description": "0.8",
+          "coverage_pct": 75.55606250712901
+        },
+        "F": {
+          "threshold": 0.1,
+          "description": "0.1",
+          "coverage_pct": 98.39861602220448
+        },
+        "G": {
+          "threshold": 0.2,
+          "description": "0.2",
+          "coverage_pct": 93.69879472263412
+        },
+        "H": {
+          "threshold": 0.5,
+          "description": "0.5",
+          "coverage_pct": 87.55887608836166
+        },
+        "I": {
+          "threshold": 0.4,
+          "description": "0.4",
+          "coverage_pct": 89.47401239496597
+        },
+        "J": {
+          "threshold": 0.3,
+          "description": "0.3",
+          "coverage_pct": 91.29272651229992
+        }
+      },
+      "mean_probability": 84.082275390625,
+      "presentation_order": 25
+    },
+    {
+      "panel": "EQ103_median4k_20251113_120558_panel1",
+      "colour": "greys",
+      "path": "greys/EQ103_median4k_20251113_120558_panel1",
+      "original_size": [
+        797,
+        1650
+      ],
+      "mapping": {
+        "A": {
+          "threshold": 0.6,
+          "description": "0.6",
+          "coverage_pct": 84.68073457282993
+        },
+        "B": {
+          "threshold": 0.4,
+          "description": "0.4",
+          "coverage_pct": 92.33580472225391
+        },
+        "C": {
+          "threshold": 0.3,
+          "description": "0.3",
+          "coverage_pct": 95.73521919318657
+        },
+        "D": {
+          "threshold": 0.9,
+          "description": "0.9",
+          "coverage_pct": 63.246112315121096
+        },
+        "E": {
+          "threshold": 0.2,
+          "description": "0.2",
+          "coverage_pct": 98.73989582145165
+        },
+        "F": {
+          "threshold": 0.7,
+          "description": "0.7",
+          "coverage_pct": 79.0745599026653
+        },
+        "G": {
+          "threshold": 0.5,
+          "description": "0.5",
+          "coverage_pct": 88.71039123987681
+        },
+        "H": {
+          "threshold": 0.8,
+          "description": "0.8",
+          "coverage_pct": 72.7555606250713
+        },
+        "I": {
+          "threshold": null,
+          "description": "none",
+          "coverage_pct": 0.0
+        },
+        "J": {
+          "threshold": 0.1,
+          "description": "0.1",
+          "coverage_pct": 99.8413748526672
+        }
+      },
+      "mean_probability": 84.59597778320312,
+      "presentation_order": 26
+    },
+    {
+      "panel": "EQ103_median4k_20250709_140537_panel1",
+      "colour": "greys",
+      "path": "greys/EQ103_median4k_20250709_140537_panel1",
+      "original_size": [
+        797,
+        1650
+      ],
+      "mapping": {
+        "A": {
+          "threshold": 0.7,
+          "description": "0.7",
+          "coverage_pct": 92.67267404281206
+        },
+        "B": {
+          "threshold": 0.5,
+          "description": "0.5",
+          "coverage_pct": 95.55416143872857
+        },
+        "C": {
+          "threshold": null,
+          "description": "none",
+          "coverage_pct": 0.0
+        },
+        "D": {
+          "threshold": 0.1,
+          "description": "0.1",
+          "coverage_pct": 99.44899433481616
+        },
+        "E": {
+          "threshold": 0.4,
+          "description": "0.4",
+          "coverage_pct": 96.52233755370519
+        },
+        "F": {
+          "threshold": 0.8,
+          "description": "0.8",
+          "coverage_pct": 89.9819018288278
+        },
+        "G": {
+          "threshold": 0.6,
+          "description": "0.6",
+          "coverage_pct": 94.37040416714193
+        },
+        "H": {
+          "threshold": 0.9,
+          "description": "0.9",
+          "coverage_pct": 84.2676704307821
+        },
+        "I": {
+          "threshold": 0.2,
+          "description": "0.2",
+          "coverage_pct": 98.52096878445687
+        },
+        "J": {
+          "threshold": 0.3,
+          "description": "0.3",
+          "coverage_pct": 97.47188319835747
+        }
+      },
+      "mean_probability": 92.89102172851562,
+      "presentation_order": 27
+    },
+    {
+      "panel": "EQ103_median4k_20250813_165843_panel1",
+      "colour": "greys",
+      "path": "greys/EQ103_median4k_20250813_165843_panel1",
+      "original_size": [
+        797,
+        1650
+      ],
+      "mapping": {
+        "A": {
+          "threshold": 0.7,
+          "description": "0.7",
+          "coverage_pct": 92.32120451693852
+        },
+        "B": {
+          "threshold": 0.9,
+          "description": "0.9",
+          "coverage_pct": 79.10961560396943
+        },
+        "C": {
+          "threshold": 0.8,
+          "description": "0.8",
+          "coverage_pct": 88.11322763393026
+        },
+        "D": {
+          "threshold": 0.3,
+          "description": "0.3",
+          "coverage_pct": 99.11364586897837
+        },
+        "E": {
+          "threshold": 0.5,
+          "description": "0.5",
+          "coverage_pct": 96.67769286338923
+        },
+        "F": {
+          "threshold": 0.6,
+          "description": "0.6",
+          "coverage_pct": 95.05935135546177
+        },
+        "G": {
+          "threshold": 0.4,
+          "description": "0.4",
+          "coverage_pct": 97.95969734991064
+        },
+        "H": {
+          "threshold": 0.2,
+          "description": "0.2",
+          "coverage_pct": 99.70419375689137
+        },
+        "I": {
+          "threshold": 0.1,
+          "description": "0.1",
+          "coverage_pct": 99.91490817839626
+        },
+        "J": {
+          "threshold": null,
+          "description": "none",
+          "coverage_pct": 0.0
+        }
+      },
+      "mean_probability": 92.06497192382812,
+      "presentation_order": 28
+    },
+    {
+      "panel": "EQ103_median4k_20250904_134729_panel2",
+      "colour": "reflectives ",
+      "path": "reflectives /EQ103_median4k_20250904_134729_panel2",
+      "original_size": [
+        797,
+        1650
+      ],
+      "mapping": {
+        "A": {
+          "threshold": 0.8,
+          "description": "0.8",
+          "coverage_pct": 71.51446713052736
+        },
+        "B": {
+          "threshold": 0.1,
+          "description": "0.1",
+          "coverage_pct": 99.98745294855709
+        },
+        "C": {
+          "threshold": null,
+          "description": "none",
+          "coverage_pct": 0.0
+        },
+        "D": {
+          "threshold": 0.7,
+          "description": "0.7",
+          "coverage_pct": 78.09239192426143
+        },
+        "E": {
+          "threshold": 0.3,
+          "description": "0.3",
+          "coverage_pct": 98.103418120984
+        },
+        "F": {
+          "threshold": 0.2,
+          "description": "0.2",
+          "coverage_pct": 99.76746131325805
+        },
+        "G": {
+          "threshold": 0.9,
+          "description": "0.9",
+          "coverage_pct": 59.83270598076119
+        },
+        "H": {
+          "threshold": 0.5,
+          "description": "0.5",
+          "coverage_pct": 87.98038097410745
+        },
+        "I": {
+          "threshold": 0.4,
+          "description": "0.4",
+          "coverage_pct": 93.26481882818143
+        },
+        "J": {
+          "threshold": 0.6,
+          "description": "0.6",
+          "coverage_pct": 83.16801642523099
+        }
+      },
+      "mean_probability": 83.71051788330078,
+      "presentation_order": 29
+    },
+    {
+      "panel": "EQ103_median4k_20250923_120525_panel3",
+      "colour": "reflectives ",
+      "path": "reflectives /EQ103_median4k_20250923_120525_panel3",
+      "original_size": [
+        797,
+        1650
+      ],
+      "mapping": {
+        "A": {
+          "threshold": 0.4,
+          "description": "0.4",
+          "coverage_pct": 94.71556214592601
+        },
+        "B": {
+          "threshold": 0.6,
+          "description": "0.6",
+          "coverage_pct": 90.5422607505418
+        },
+        "C": {
+          "threshold": 0.7,
+          "description": "0.7",
+          "coverage_pct": 87.1663434850386
+        },
+        "D": {
+          "threshold": 0.3,
+          "description": "0.3",
+          "coverage_pct": 96.418082962625
+        },
+        "E": {
+          "threshold": 0.9,
+          "description": "0.9",
+          "coverage_pct": 71.66586821793848
+        },
+        "F": {
+          "threshold": 0.5,
+          "description": "0.5",
+          "coverage_pct": 92.85464431010227
+        },
+        "G": {
+          "threshold": null,
+          "description": "none",
+          "coverage_pct": 0.0
+        },
+        "H": {
+          "threshold": 0.2,
+          "description": "0.2",
+          "coverage_pct": 98.10547127485647
+        },
+        "I": {
+          "threshold": 0.8,
+          "description": "0.8",
+          "coverage_pct": 82.38895859473024
+        },
+        "J": {
+          "threshold": 0.1,
+          "description": "0.1",
+          "coverage_pct": 99.63050834569029
+        }
+      },
+      "mean_probability": 88.55152893066406,
+      "presentation_order": 30
+    },
+    {
+      "panel": "EQ103_median4k_20250923_120232_panel1",
+      "colour": "reds",
+      "path": "reds/EQ103_median4k_20250923_120232_panel1",
+      "original_size": [
+        797,
+        1650
+      ],
+      "mapping": {
+        "A": {
+          "threshold": 0.8,
+          "description": "0.8",
+          "coverage_pct": 62.62910155507395
+        },
+        "B": {
+          "threshold": 0.1,
+          "description": "0.1",
+          "coverage_pct": 99.97338504239383
+        },
+        "C": {
+          "threshold": 0.5,
+          "description": "0.5",
+          "coverage_pct": 86.55541614387286
+        },
+        "D": {
+          "threshold": 0.7,
+          "description": "0.7",
+          "coverage_pct": 69.41074483859929
+        },
+        "E": {
+          "threshold": 0.9,
+          "description": "0.9",
+          "coverage_pct": 55.62358845671267
+        },
+        "F": {
+          "threshold": null,
+          "description": "none",
+          "coverage_pct": 0.0
+        },
+        "G": {
+          "threshold": 0.3,
+          "description": "0.3",
+          "coverage_pct": 95.65925249990495
+        },
+        "H": {
+          "threshold": 0.6,
+          "description": "0.6",
+          "coverage_pct": 79.51880156648036
+        },
+        "I": {
+          "threshold": 0.4,
+          "description": "0.4",
+          "coverage_pct": 91.58777232804837
+        },
+        "J": {
+          "threshold": 0.2,
+          "description": "0.2",
+          "coverage_pct": 98.96733964488043
+        }
+      },
+      "mean_probability": 80.53233337402344,
+      "presentation_order": 31
+    },
+    {
+      "panel": "EQ103_median4k_20250923_115753_panel2",
+      "colour": "reflectives ",
+      "path": "reflectives /EQ103_median4k_20250923_115753_panel2",
+      "original_size": [
+        797,
+        1650
+      ],
+      "mapping": {
+        "A": {
+          "threshold": 0.7,
+          "description": "0.7",
+          "coverage_pct": 97.15934755332498
+        },
+        "B": {
+          "threshold": 0.4,
+          "description": "0.4",
+          "coverage_pct": 98.11018592448957
+        },
+        "C": {
+          "threshold": 0.6,
+          "description": "0.6",
+          "coverage_pct": 97.53758412227673
+        },
+        "D": {
+          "threshold": null,
+          "description": "none",
+          "coverage_pct": 0.0
+        },
+        "E": {
+          "threshold": 0.1,
+          "description": "0.1",
+          "coverage_pct": 99.10208737310369
+        },
+        "F": {
+          "threshold": 0.3,
+          "description": "0.3",
+          "coverage_pct": 98.39329303068325
+        },
+        "G": {
+          "threshold": 0.8,
+          "description": "0.8",
+          "coverage_pct": 96.6064408197407
+        },
+        "H": {
+          "threshold": 0.2,
+          "description": "0.2",
+          "coverage_pct": 98.71069541082088
+        },
+        "I": {
+          "threshold": 0.5,
+          "description": "0.5",
+          "coverage_pct": 97.83802897228242
+        },
+        "J": {
+          "threshold": 0.9,
+          "description": "0.9",
+          "coverage_pct": 95.5599406866659
+        }
+      },
+      "mean_probability": 97.35950469970703,
+      "presentation_order": 32
+    },
+    {
+      "panel": "2024-07-19_03-15-02",
+      "colour": "green",
+      "path": "green/2024-07-19_03-15-02",
+      "original_size": [
+        550,
+        987
+      ],
+      "mapping": {
+        "A": {
+          "threshold": 0.1,
+          "description": "0.1",
+          "coverage_pct": 13.862024500322374
+        },
+        "B": {
+          "threshold": 0.9,
+          "description": "0.9",
+          "coverage_pct": 0.32458321820023944
+        },
+        "C": {
+          "threshold": 0.8,
+          "description": "0.8",
+          "coverage_pct": 0.46845353228331954
+        },
+        "D": {
+          "threshold": 0.7,
+          "description": "0.7",
+          "coverage_pct": 0.624113475177305
+        },
+        "E": {
+          "threshold": 0.2,
+          "description": "0.2",
+          "coverage_pct": 4.721930551717786
+        },
+        "F": {
+          "threshold": 0.3,
+          "description": "0.3",
+          "coverage_pct": 2.659850787510362
+        },
+        "G": {
+          "threshold": 0.6,
+          "description": "0.6",
+          "coverage_pct": 0.9341438703140831
+        },
+        "H": {
+          "threshold": 0.4,
+          "description": "0.4",
+          "coverage_pct": 1.7472598323662154
+        },
+        "I": {
+          "threshold": null,
+          "description": "none",
+          "coverage_pct": 0.0
+        },
+        "J": {
+          "threshold": 0.5,
+          "description": "0.5",
+          "coverage_pct": 1.1780418163396886
+        }
+      },
+      "mean_probability": 6.890536785125732,
+      "presentation_order": 33
+    },
+    {
+      "panel": "EQ103_median4k_20250904_134350_panel1",
+      "colour": "reflectives ",
+      "path": "reflectives /EQ103_median4k_20250904_134350_panel1",
+      "original_size": [
+        797,
+        1650
+      ],
+      "mapping": {
+        "A": {
+          "threshold": null,
+          "description": "none",
+          "coverage_pct": 0.0
+        },
+        "B": {
+          "threshold": 0.8,
+          "description": "0.8",
+          "coverage_pct": 72.03125356450325
+        },
+        "C": {
+          "threshold": 0.7,
+          "description": "0.7",
+          "coverage_pct": 77.78784076651077
+        },
+        "D": {
+          "threshold": 0.9,
+          "description": "0.9",
+          "coverage_pct": 62.54454203262233
+        },
+        "E": {
+          "threshold": 0.3,
+          "description": "0.3",
+          "coverage_pct": 92.06030188966199
+        },
+        "F": {
+          "threshold": 0.4,
+          "description": "0.4",
+          "coverage_pct": 88.74468651382077
+        },
+        "G": {
+          "threshold": 0.6,
+          "description": "0.6",
+          "coverage_pct": 82.07452188129729
+        },
+        "H": {
+          "threshold": 0.2,
+          "description": "0.2",
+          "coverage_pct": 95.83148929698491
+        },
+        "I": {
+          "threshold": 0.1,
+          "description": "0.1",
+          "coverage_pct": 99.39036538534657
+        },
+        "J": {
+          "threshold": 0.5,
+          "description": "0.5",
+          "coverage_pct": 85.60199231968366
+        }
+      },
+      "mean_probability": 82.36942291259766,
+      "presentation_order": 34
+    },
+    {
+      "panel": "EQ103_median4k_20251001_101849_panel1",
+      "colour": "reflectives ",
+      "path": "reflectives /EQ103_median4k_20251001_101849_panel1",
+      "original_size": [
+        797,
+        1650
+      ],
+      "mapping": {
+        "A": {
+          "threshold": 0.2,
+          "description": "0.2",
+          "coverage_pct": 96.78065472795711
+        },
+        "B": {
+          "threshold": 0.1,
+          "description": "0.1",
+          "coverage_pct": 99.3021558115661
+        },
+        "C": {
+          "threshold": 0.8,
+          "description": "0.8",
+          "coverage_pct": 75.64252309798107
+        },
+        "D": {
+          "threshold": 0.7,
+          "description": "0.7",
+          "coverage_pct": 81.18512604083496
+        },
+        "E": {
+          "threshold": 0.9,
+          "description": "0.9",
+          "coverage_pct": 66.58051024675868
+        },
+        "F": {
+          "threshold": 0.4,
+          "description": "0.4",
+          "coverage_pct": 91.19797726322193
+        },
+        "G": {
+          "threshold": 0.6,
+          "description": "0.6",
+          "coverage_pct": 85.24238622105624
+        },
+        "H": {
+          "threshold": null,
+          "description": "none",
+          "coverage_pct": 0.0
+        },
+        "I": {
+          "threshold": 0.5,
+          "description": "0.5",
+          "coverage_pct": 88.50051328846811
+        },
+        "J": {
+          "threshold": 0.3,
+          "description": "0.3",
+          "coverage_pct": 93.99961978631991
+        }
+      },
+      "mean_probability": 84.88306427001953,
+      "presentation_order": 35
+    },
+    {
+      "panel": "EQ103_median4k_20250904_140801_panel1",
+      "colour": "blues",
+      "path": "blues/EQ103_median4k_20250904_140801_panel1",
+      "original_size": [
+        797,
+        1650
+      ],
+      "mapping": {
+        "A": {
+          "threshold": 0.7,
+          "description": "0.7",
+          "coverage_pct": 37.98479145279647
+        },
+        "B": {
+          "threshold": 0.6,
+          "description": "0.6",
+          "coverage_pct": 51.69902285084217
+        },
+        "C": {
+          "threshold": 0.4,
+          "description": "0.4",
+          "coverage_pct": 75.23942055435154
+        },
+        "D": {
+          "threshold": 0.9,
+          "description": "0.9",
+          "coverage_pct": 9.898711075624501
+        },
+        "E": {
+          "threshold": 0.8,
+          "description": "0.8",
+          "coverage_pct": 22.736778069274934
+        },
+        "F": {
+          "threshold": 0.1,
+          "description": "0.1",
+          "coverage_pct": 99.99102695714993
+        },
+        "G": {
+          "threshold": 0.5,
+          "description": "0.5",
+          "coverage_pct": 63.363066043116234
+        },
+        "H": {
+          "threshold": 0.3,
+          "description": "0.3",
+          "coverage_pct": 88.67655222234896
+        },
+        "I": {
+          "threshold": null,
+          "description": "none",
+          "coverage_pct": 0.0
+        },
+        "J": {
+          "threshold": 0.2,
+          "description": "0.2",
+          "coverage_pct": 98.27960914033686
+        }
+      },
+      "mean_probability": 59.7525520324707,
+      "presentation_order": 36
+    },
+    {
+      "panel": "EQ103_median4k_20251031_152125_panel1",
+      "colour": "greys",
+      "path": "greys/EQ103_median4k_20251031_152125_panel1",
+      "original_size": [
+        797,
+        1650
+      ],
+      "mapping": {
+        "A": {
+          "threshold": 0.4,
+          "description": "0.4",
+          "coverage_pct": 95.55629063533706
+        },
+        "B": {
+          "threshold": 0.8,
+          "description": "0.8",
+          "coverage_pct": 82.08828561651649
+        },
+        "C": {
+          "threshold": 0.9,
+          "description": "0.9",
+          "coverage_pct": 68.9892399528535
+        },
+        "D": {
+          "threshold": 0.2,
+          "description": "0.2",
+          "coverage_pct": 98.55982662256187
+        },
+        "E": {
+          "threshold": 0.3,
+          "description": "0.3",
+          "coverage_pct": 97.267252195734
+        },
+        "F": {
+          "threshold": null,
+          "description": "none",
+          "coverage_pct": 0.0
+        },
+        "G": {
+          "threshold": 0.7,
+          "description": "0.7",
+          "coverage_pct": 87.9340709478727
+        },
+        "H": {
+          "threshold": 0.6,
+          "description": "0.6",
+          "coverage_pct": 91.38846431694613
+        },
+        "I": {
+          "threshold": 0.5,
+          "description": "0.5",
+          "coverage_pct": 93.70746359454013
+        },
+        "J": {
+          "threshold": 0.1,
+          "description": "0.1",
+          "coverage_pct": 99.66746511539485
+        }
+      },
+      "mean_probability": 87.99581909179688,
+      "presentation_order": 37
+    },
+    {
+      "panel": "EQ103_median4k_20251106_124338_panel2",
+      "colour": "reds",
+      "path": "reds/EQ103_median4k_20251106_124338_panel2",
+      "original_size": [
+        797,
+        1650
+      ],
+      "mapping": {
+        "A": {
+          "threshold": 0.4,
+          "description": "0.4",
+          "coverage_pct": 89.00452454279305
+        },
+        "B": {
+          "threshold": 0.3,
+          "description": "0.3",
+          "coverage_pct": 92.9185202083571
+        },
+        "C": {
+          "threshold": 0.1,
+          "description": "0.1",
+          "coverage_pct": 98.59632713585034
+        },
+        "D": {
+          "threshold": 0.8,
+          "description": "0.8",
+          "coverage_pct": 58.06615718033535
+        },
+        "E": {
+          "threshold": null,
+          "description": "none",
+          "coverage_pct": 0.0
+        },
+        "F": {
+          "threshold": 0.9,
+          "description": "0.9",
+          "coverage_pct": 38.958594730238396
+        },
+        "G": {
+          "threshold": 0.5,
+          "description": "0.5",
+          "coverage_pct": 84.49359339949052
+        },
+        "H": {
+          "threshold": 0.7,
+          "description": "0.7",
+          "coverage_pct": 70.48385992928026
+        },
+        "I": {
+          "threshold": 0.6,
+          "description": "0.6",
+          "coverage_pct": 79.13265655298277
+        },
+        "J": {
+          "threshold": 0.2,
+          "description": "0.2",
+          "coverage_pct": 96.1823504809703
+        }
+      },
+      "mean_probability": 75.89865112304688,
+      "presentation_order": 38
+    },
+    {
+      "panel": "EQ103_median4k_20251008_112310_panel2",
+      "colour": "blues",
+      "path": "blues/EQ103_median4k_20251008_112310_panel2",
+      "original_size": [
+        797,
+        1650
+      ],
+      "mapping": {
+        "A": {
+          "threshold": null,
+          "description": "none",
+          "coverage_pct": 0.0
+        },
+        "B": {
+          "threshold": 0.9,
+          "description": "0.9",
+          "coverage_pct": 38.695334778145316
+        },
+        "C": {
+          "threshold": 0.5,
+          "description": "0.5",
+          "coverage_pct": 83.65103988441504
+        },
+        "D": {
+          "threshold": 0.2,
+          "description": "0.2",
+          "coverage_pct": 97.93110528116802
+        },
+        "E": {
+          "threshold": 0.4,
+          "description": "0.4",
+          "coverage_pct": 88.88087905402836
+        },
+        "F": {
+          "threshold": 0.8,
+          "description": "0.8",
+          "coverage_pct": 58.011254324930604
+        },
+        "G": {
+          "threshold": 0.6,
+          "description": "0.6",
+          "coverage_pct": 78.09087106954108
+        },
+        "H": {
+          "threshold": 0.3,
+          "description": "0.3",
+          "coverage_pct": 93.9245656058705
+        },
+        "I": {
+          "threshold": 0.1,
+          "description": "0.1",
+          "coverage_pct": 99.8289038439603
+        },
+        "J": {
+          "threshold": 0.7,
+          "description": "0.7",
+          "coverage_pct": 69.87795140869169
+        }
+      },
+      "mean_probability": 76.01341247558594,
+      "presentation_order": 39
+    },
+    {
+      "panel": "EQ103_median4k_20250827_132737_panel2",
+      "colour": "reds",
+      "path": "reds/EQ103_median4k_20250827_132737_panel2",
+      "original_size": [
+        797,
+        1650
+      ],
+      "mapping": {
+        "A": {
+          "threshold": 0.8,
+          "description": "0.8",
+          "coverage_pct": 37.09798106535873
+        },
+        "B": {
+          "threshold": 0.3,
+          "description": "0.3",
+          "coverage_pct": 99.24436333219269
+        },
+        "C": {
+          "threshold": 0.6,
+          "description": "0.6",
+          "coverage_pct": 80.00707197444964
+        },
+        "D": {
+          "threshold": 0.5,
+          "description": "0.5",
+          "coverage_pct": 88.01520854720353
+        },
+        "E": {
+          "threshold": null,
+          "description": "none",
+          "coverage_pct": 0.0
+        },
+        "F": {
+          "threshold": 0.4,
+          "description": "0.4",
+          "coverage_pct": 95.41903349682521
+        },
+        "G": {
+          "threshold": 0.9,
+          "description": "0.9",
+          "coverage_pct": 17.582829550207215
+        },
+        "H": {
+          "threshold": 0.1,
+          "description": "0.1",
+          "coverage_pct": 100.0
+        },
+        "I": {
+          "threshold": 0.7,
+          "description": "0.7",
+          "coverage_pct": 63.096232082430326
+        },
+        "J": {
+          "threshold": 0.2,
+          "description": "0.2",
+          "coverage_pct": 99.9780236492909
+        }
+      },
+      "mean_probability": 72.98755645751953,
+      "presentation_order": 40
+    },
+    {
+      "panel": "EQ103_median4k_20251008_112434_panel2",
+      "colour": "blues",
+      "path": "blues/EQ103_median4k_20251008_112434_panel2",
+      "original_size": [
+        797,
+        1650
+      ],
+      "mapping": {
+        "A": {
+          "threshold": 0.7,
+          "description": "0.7",
+          "coverage_pct": 94.92049731949356
+        },
+        "B": {
+          "threshold": 0.3,
+          "description": "0.3",
+          "coverage_pct": 99.75940078324018
+        },
+        "C": {
+          "threshold": null,
+          "description": "none",
+          "coverage_pct": 0.0
+        },
+        "D": {
+          "threshold": 0.8,
+          "description": "0.8",
+          "coverage_pct": 88.49123607467396
+        },
+        "E": {
+          "threshold": 0.2,
+          "description": "0.2",
+          "coverage_pct": 99.96699745256834
+        },
+        "F": {
+          "threshold": 0.6,
+          "description": "0.6",
+          "coverage_pct": 97.87871183605186
+        },
+        "G": {
+          "threshold": 0.1,
+          "description": "0.1",
+          "coverage_pct": 100.0
+        },
+        "H": {
+          "threshold": 0.9,
+          "description": "0.9",
+          "coverage_pct": 65.219801528459
+        },
+        "I": {
+          "threshold": 0.4,
+          "description": "0.4",
+          "coverage_pct": 99.3931029238432
+        },
+        "J": {
+          "threshold": 0.5,
+          "description": "0.5",
+          "coverage_pct": 98.9125128322117
+        }
+      },
+      "mean_probability": 89.44708251953125,
+      "presentation_order": 41
+    },
+    {
+      "panel": "EQ103_median4k_20251031_151156_panel1",
+      "colour": "blues",
+      "path": "blues/EQ103_median4k_20251031_151156_panel1",
+      "original_size": [
+        797,
+        1650
+      ],
+      "mapping": {
+        "A": {
+          "threshold": null,
+          "description": "none",
+          "coverage_pct": 0.0
+        },
+        "B": {
+          "threshold": 0.7,
+          "description": "0.7",
+          "coverage_pct": 2.384548116041215
+        },
+        "C": {
+          "threshold": 0.1,
+          "description": "0.1",
+          "coverage_pct": 93.81993080111022
+        },
+        "D": {
+          "threshold": 0.3,
+          "description": "0.3",
+          "coverage_pct": 46.49557051062697
+        },
+        "E": {
+          "threshold": 0.4,
+          "description": "0.4",
+          "coverage_pct": 8.729630052089274
+        },
+        "F": {
+          "threshold": 0.9,
+          "description": "0.9",
+          "coverage_pct": 0.9369985932093837
+        },
+        "G": {
+          "threshold": 0.8,
+          "description": "0.8",
+          "coverage_pct": 1.6698984829474164
+        },
+        "H": {
+          "threshold": 0.6,
+          "description": "0.6",
+          "coverage_pct": 3.1542526900117864
+        },
+        "I": {
+          "threshold": 0.5,
+          "description": "0.5",
+          "coverage_pct": 4.439146800501883
+        },
+        "J": {
+          "threshold": 0.2,
+          "description": "0.2",
+          "coverage_pct": 67.33850423938253
+        }
+      },
+      "mean_probability": 27.69329261779785,
+      "presentation_order": 42
+    },
+    {
+      "panel": "2024-07-24_03-15-03",
+      "colour": "green",
+      "path": "green/2024-07-24_03-15-03",
+      "original_size": [
+        550,
+        987
+      ],
+      "mapping": {
+        "A": {
+          "threshold": 0.6,
+          "description": "0.6",
+          "coverage_pct": 12.0230266187713
+        },
+        "B": {
+          "threshold": 0.9,
+          "description": "0.9",
+          "coverage_pct": 5.841024224002948
+        },
+        "C": {
+          "threshold": 0.2,
+          "description": "0.2",
+          "coverage_pct": 35.26296398636824
+        },
+        "D": {
+          "threshold": 0.4,
+          "description": "0.4",
+          "coverage_pct": 17.729575389149858
+        },
+        "E": {
+          "threshold": 0.8,
+          "description": "0.8",
+          "coverage_pct": 7.786681403702681
+        },
+        "F": {
+          "threshold": 0.7,
+          "description": "0.7",
+          "coverage_pct": 9.728838537349176
+        },
+        "G": {
+          "threshold": 0.1,
+          "description": "0.1",
+          "coverage_pct": 71.47020355530994
+        },
+        "H": {
+          "threshold": null,
+          "description": "none",
+          "coverage_pct": 0.0
+        },
+        "I": {
+          "threshold": 0.3,
+          "description": "0.3",
+          "coverage_pct": 23.175278622087134
+        },
+        "J": {
+          "threshold": 0.5,
+          "description": "0.5",
+          "coverage_pct": 14.334899143409782
+        }
+      },
+      "mean_probability": 24.910892486572266,
+      "presentation_order": 43
+    },
+    {
+      "panel": "2024-07-29_03-15-02",
+      "colour": "green",
+      "path": "green/2024-07-29_03-15-02",
+      "original_size": [
+        514,
+        963
+      ],
+      "mapping": {
+        "A": {
+          "threshold": null,
+          "description": "none",
+          "coverage_pct": 0.0
+        },
+        "B": {
+          "threshold": 0.6,
+          "description": "0.6",
+          "coverage_pct": 97.94820821767256
+        },
+        "C": {
+          "threshold": 0.1,
+          "description": "0.1",
+          "coverage_pct": 100.0
+        },
+        "D": {
+          "threshold": 0.3,
+          "description": "0.3",
+          "coverage_pct": 99.92201736628806
+        },
+        "E": {
+          "threshold": 0.8,
+          "description": "0.8",
+          "coverage_pct": 69.92153250017172
+        },
+        "F": {
+          "threshold": 0.5,
+          "description": "0.5",
+          "coverage_pct": 99.2999745445289
+        },
+        "G": {
+          "threshold": 0.4,
+          "description": "0.4",
+          "coverage_pct": 99.76403182337944
+        },
+        "H": {
+          "threshold": 0.2,
+          "description": "0.2",
+          "coverage_pct": 100.0
+        },
+        "I": {
+          "threshold": 0.9,
+          "description": "0.9",
+          "coverage_pct": 27.099369269993655
+        },
+        "J": {
+          "threshold": 0.7,
+          "description": "0.7",
+          "coverage_pct": 90.63743732095308
+        }
+      },
+      "mean_probability": 83.35566711425781,
+      "presentation_order": 44
+    },
+    {
+      "panel": "2024-08-04_03-15-03",
+      "colour": "green",
+      "path": "green/2024-08-04_03-15-03",
+      "original_size": [
+        550,
+        987
+      ],
+      "mapping": {
+        "A": {
+          "threshold": 0.5,
+          "description": "0.5",
+          "coverage_pct": 84.1766602192134
+        },
+        "B": {
+          "threshold": 0.2,
+          "description": "0.2",
+          "coverage_pct": 92.04089527493782
+        },
+        "C": {
+          "threshold": 0.6,
+          "description": "0.6",
+          "coverage_pct": 81.54407294832828
+        },
+        "D": {
+          "threshold": 0.7,
+          "description": "0.7",
+          "coverage_pct": 77.57778391820945
+        },
+        "E": {
+          "threshold": null,
+          "description": "none",
+          "coverage_pct": 0.0
+        },
+        "F": {
+          "threshold": 0.8,
+          "description": "0.8",
+          "coverage_pct": 72.04015842313714
+        },
+        "G": {
+          "threshold": 0.3,
+          "description": "0.3",
+          "coverage_pct": 89.65202173712812
+        },
+        "H": {
+          "threshold": 0.4,
+          "description": "0.4",
+          "coverage_pct": 86.83172147001935
+        },
+        "I": {
+          "threshold": 0.9,
+          "description": "0.9",
+          "coverage_pct": 60.078658929722764
+        },
+        "J": {
+          "threshold": 0.1,
+          "description": "0.1",
+          "coverage_pct": 94.3932946486138
+        }
+      },
+      "mean_probability": 78.6569595336914,
+      "presentation_order": 45
+    },
+    {
+      "panel": "EQ103_median4k_20250721_091907_panel1",
+      "colour": "blues",
+      "path": "blues/EQ103_median4k_20250721_091907_panel1",
+      "original_size": [
+        797,
+        1650
+      ],
+      "mapping": {
+        "A": {
+          "threshold": 0.1,
+          "description": "0.1",
+          "coverage_pct": 99.03410516710392
+        },
+        "B": {
+          "threshold": null,
+          "description": "none",
+          "coverage_pct": 0.0
+        },
+        "C": {
+          "threshold": 0.8,
+          "description": "0.8",
+          "coverage_pct": 6.9255161400707195
+        },
+        "D": {
+          "threshold": 0.7,
+          "description": "0.7",
+          "coverage_pct": 15.23348922094217
+        },
+        "E": {
+          "threshold": 0.3,
+          "description": "0.3",
+          "coverage_pct": 81.25485722976312
+        },
+        "F": {
+          "threshold": 0.4,
+          "description": "0.4",
+          "coverage_pct": 67.88441504125319
+        },
+        "G": {
+          "threshold": 0.6,
+          "description": "0.6",
+          "coverage_pct": 28.021063837876888
+        },
+        "H": {
+          "threshold": 0.9,
+          "description": "0.9",
+          "coverage_pct": 2.1012128816394813
+        },
+        "I": {
+          "threshold": 0.5,
+          "description": "0.5",
+          "coverage_pct": 45.697349910649784
+        },
+        "J": {
+          "threshold": 0.2,
+          "description": "0.2",
+          "coverage_pct": 90.5491806395194
+        }
+      },
+      "mean_probability": 48.591670989990234,
+      "presentation_order": 46
+    },
+    {
+      "panel": "EQ103_median4k_20251015_095932_panel2",
+      "colour": "blues",
+      "path": "blues/EQ103_median4k_20251015_095932_panel2",
+      "original_size": [
+        797,
+        1650
+      ],
+      "mapping": {
+        "A": {
+          "threshold": 0.1,
+          "description": "0.1",
+          "coverage_pct": 99.65780768792061
+        },
+        "B": {
+          "threshold": 0.5,
+          "description": "0.5",
+          "coverage_pct": 83.58670772974412
+        },
+        "C": {
+          "threshold": null,
+          "description": "none",
+          "coverage_pct": 0.0
+        },
+        "D": {
+          "threshold": 0.2,
+          "description": "0.2",
+          "coverage_pct": 98.22212083190753
+        },
+        "E": {
+          "threshold": 0.7,
+          "description": "0.7",
+          "coverage_pct": 66.44758754419983
+        },
+        "F": {
+          "threshold": 0.6,
+          "description": "0.6",
+          "coverage_pct": 76.61305653777423
+        },
+        "G": {
+          "threshold": 0.8,
+          "description": "0.8",
+          "coverage_pct": 53.52830690848257
+        },
+        "H": {
+          "threshold": 0.4,
+          "description": "0.4",
+          "coverage_pct": 89.71195011596518
+        },
+        "I": {
+          "threshold": 0.3,
+          "description": "0.3",
+          "coverage_pct": 95.18763545112353
+        },
+        "J": {
+          "threshold": 0.9,
+          "description": "0.9",
+          "coverage_pct": 34.92262651610205
+        }
+      },
+      "mean_probability": 74.77189636230469,
+      "presentation_order": 47
+    },
+    {
+      "panel": "EQ103_median4k_20250904_134602_panel2",
+      "colour": "reflectives ",
+      "path": "reflectives /EQ103_median4k_20250904_134602_panel2",
+      "original_size": [
+        797,
+        1650
+      ],
+      "mapping": {
+        "A": {
+          "threshold": 0.8,
+          "description": "0.8",
+          "coverage_pct": 66.18554427588305
+        },
+        "B": {
+          "threshold": 0.5,
+          "description": "0.5",
+          "coverage_pct": 80.36698224402113
+        },
+        "C": {
+          "threshold": 0.6,
+          "description": "0.6",
+          "coverage_pct": 76.38850233831414
+        },
+        "D": {
+          "threshold": 0.4,
+          "description": "0.4",
+          "coverage_pct": 84.43473632181286
+        },
+        "E": {
+          "threshold": 0.2,
+          "description": "0.2",
+          "coverage_pct": 94.18174213908217
+        },
+        "F": {
+          "threshold": null,
+          "description": "none",
+          "coverage_pct": 0.0
+        },
+        "G": {
+          "threshold": 0.3,
+          "description": "0.3",
+          "coverage_pct": 89.11866468955553
+        },
+        "H": {
+          "threshold": 0.1,
+          "description": "0.1",
+          "coverage_pct": 99.00961940610622
+        },
+        "I": {
+          "threshold": 0.9,
+          "description": "0.9",
+          "coverage_pct": 56.71442150488575
+        },
+        "J": {
+          "threshold": 0.7,
+          "description": "0.7",
+          "coverage_pct": 71.99490513668681
+        }
+      },
+      "mean_probability": 78.43385314941406,
+      "presentation_order": 48
+    }
+  ]
+}

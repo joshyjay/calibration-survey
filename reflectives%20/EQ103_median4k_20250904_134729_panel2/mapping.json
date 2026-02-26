@@ -1,0 +1,52 @@
+{
+  "A": {
+    "threshold": 0.8,
+    "description": "0.8",
+    "coverage_pct": 71.51446713052736
+  },
+  "B": {
+    "threshold": 0.1,
+    "description": "0.1",
+    "coverage_pct": 99.98745294855709
+  },
+  "C": {
+    "threshold": null,
+    "description": "none",
+    "coverage_pct": 0.0
+  },
+  "D": {
+    "threshold": 0.7,
+    "description": "0.7",
+    "coverage_pct": 78.09239192426143
+  },
+  "E": {
+    "threshold": 0.3,
+    "description": "0.3",
+    "coverage_pct": 98.103418120984
+  },
+  "F": {
+    "threshold": 0.2,
+    "description": "0.2",
+    "coverage_pct": 99.76746131325805
+  },
+  "G": {
+    "threshold": 0.9,
+    "description": "0.9",
+    "coverage_pct": 59.83270598076119
+  },
+  "H": {
+    "threshold": 0.5,
+    "description": "0.5",
+    "coverage_pct": 87.98038097410745
+  },
+  "I": {
+    "threshold": 0.4,
+    "description": "0.4",
+    "coverage_pct": 93.26481882818143
+  },
+  "J": {
+    "threshold": 0.6,
+    "description": "0.6",
+    "coverage_pct": 83.16801642523099
+  }
+}
